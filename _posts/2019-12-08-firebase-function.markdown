@@ -119,7 +119,7 @@ firebase deploy
 
 You should now see this in the **Dashboard** tab:
 
-![a8ebe67e.png](http://Kelvas09.github.io/assets/assets/img/posts/firebase_functions/functions.png)
+![a8ebe67e.png](https://Kkelvas09.github.io/assets/img/posts/firebase_functions/functions.png)
 
 In this picture, the part in red is the address where you can call your cloud function. Don't forget to add **/test** in our case for this to work.
 

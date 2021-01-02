@@ -100,7 +100,7 @@ Once you have selected your git, you will be able to select the basic configurat
 
 In our case, we will select **Node.js** as you can see below.
 
-![a8ebe67e.png](http://Kelvas09.github.io/assets/assets/img/posts/firebase_devops/a8ebe67e.png)
+![a8ebe67e.png](https://kelvas09.github.io/assets/img/posts/firebase_devops/a8ebe67e.png)
 
 The following script will have been generated. It is interesting but does not yet allow us to deploy on firebase. To do this, we will have to make some changes.
 
@@ -176,11 +176,11 @@ In theory on your development machine no problem, you enter your credentials on 
 
 To do this, click on the "Variables" button just above the editing area of the pipeline script:
 
-![6cef3090.png](http://Kelvas09.github.io/assets/assets/img/posts/firebase_devops/variable.png)
+![6cef3090.png](https://kelvas09.github.io/assets/img/posts/firebase_devops/variable.png)
 
 You will see the following popup displayed: 
 
-![30af7aa2.png](http://Kelvas09.github.io/assets/assets/img/posts/firebase_devops/variables.png)
+![30af7aa2.png](https://kelvas09.github.io/assets/img/posts/firebase_devops/variables.png)
 
 As you can see, I have personally already entered two hidden variables: firebase-project and firebase token.
 
@@ -188,6 +188,6 @@ You will find them in particular in line 23 of the pipeline script. They are the
 
 It is now possible for you to automatically deploy your code on Firebase ! Isn't that wonderful? If you wish to test it, simply click on the "Run" button located at the same level as the "Variable" button or save and commit to the trigger branch(s) of this pipeline. 
 
-![b6cedaa4.png](http://Kelvas09.github.io/assets/assets/img/posts/firebase_devops/b6cedaa4.png)
+![b6cedaa4.png](https://kelvas09.github.io/assets/img/posts/firebase_devops/b6cedaa4.png)
 
 Don't forget that Azure DevOps offers you 1800 minutes per month of shared pipeline. Something to start having fun and even work with 😍.

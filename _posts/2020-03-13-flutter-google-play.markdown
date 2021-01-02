@@ -11,7 +11,7 @@ But did you go as far as publishing on stores and especially on Google Play?
 
 I personally tried to publish an application made with this technology on Google Play but I found myself faced with an unexpected error:
 
-![x64 Code Error](http://Kelvas09.github.io/assets/assets/img/posts/flutter_x64_googleplay/x64_error.png)
+![x64 Code Error](https://kelvas09.github.io/assets/img/posts/flutter_x64_googleplay/x64_error.png)
 
 That's a problem!
 
@@ -42,7 +42,7 @@ An APK with the name **app-armeabi-v7a-release.apk** will be generated. Note tha
 
 Now increment the CodeVersion property of your project otherwise Google Play will refuse your new APK:
 
-![Version Code Error](http://Kelvas09.github.io/assets/assets/img/posts/flutter_x64_googleplay/versionCode_error.png)
+![Version Code Error](https://kelvas09.github.io/assets/img/posts/flutter_x64_googleplay/versionCode_error.png)
 
 You can now generate the second APK with the command:
 

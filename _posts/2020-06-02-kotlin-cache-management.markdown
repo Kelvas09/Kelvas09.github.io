@@ -46,7 +46,7 @@ For this demo, we will use Rick and Morty's free and open API : https://rickandm
 First, we will display in a list the characters of Rick and Morty but without managing the pagination. The goal being to obtain something similar to this:
 
 
-![Sample](http://Kelvas09.github.io/assets/assets/img/posts/kotlin_cache_management/rick-morty.png)
+![Sample](https://kelvas09.github.io/assets/img/posts/kotlin_cache_management/rick-morty.png)
 
 Nothing complicated so far. I won't detail how to get to that but only on how to manage the cache. If the rest interests you, do not hesitate to consult the [Git](https://gitlab.com/KevinSib/kotlin-cache-management-sample) of this article.
 
