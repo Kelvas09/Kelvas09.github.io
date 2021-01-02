@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pourquoi le vinyle ?"
-date:   2021-01-01 00:00:00 +0100
+date:   2021-01-01 01:00:00 +0100
 categories: personal vinyle music
 ---
 
