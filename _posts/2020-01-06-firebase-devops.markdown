@@ -94,7 +94,7 @@ If you want to have a large number of examples, I invite you to visit Google's G
 
 Let's start by creating a new pipeline. For simplicity's sake, I advise you to host your git directly on DevOps. Select **Azure Repos Git**. If not, choose the provider that suits you.
 
-![59742b07.png](http://Kelvas09.github.io/assets/assets/img/posts/firebase_devops/59742b07.png)
+![59742b07.png](https://kelvas09.github.io/assets/img/posts/firebase_devops/59742b07.png)
 
 Once you have selected your git, you will be able to select the basic configuration. This is a simple tool that will pre-construct a yaml script containing a set of pre-defined tasks for the chosen project type. Of course, everything can be modified at will.
 
