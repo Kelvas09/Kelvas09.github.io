@@ -32,6 +32,7 @@ theme: jekyll-theme-hydejack
 plugins:
   - jekyll-feed
   - jekyll-avatar
+  - jekyll-include-cache
 
 menu:
   - title: Blog
