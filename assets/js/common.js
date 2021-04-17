@@ -76,7 +76,7 @@ $(document).ready(function() {
       Hamburger
     -------------------------------------------------------------------*/
 
-    $('.hamburger').on('click', function() {
+    $('.hamburger-menu').on('click', function() {
         $(this).toggleClass('is-active');
 	    $('.inner-menu').toggleClass('is-active');
 		$('body').toggleClass('open-menu');

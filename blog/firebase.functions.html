@@ -83,6 +83,13 @@
             <div class="row sticky-parent">
                 <div class="col-16 col-md-16 col-xl-16">
                     <div class="box shadow pb-0">
+                        <div class="circle-menu">
+						    <div class="hamburger hamburger-closer is-active" onclick="console.log('toto')">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+						</div>
                         <div class="pb-3">
                             <header class="header-post">
                                 <div class="header-post__date">Apr 17, 2021</div>
@@ -376,6 +383,13 @@ app.put(<span class="hljs-string">&#x27;/user/disable/:id&#x27;</span>, <span cl
     <script src="../assets/js/jquery-3.4.1.min.js"></script>
     <script src="../assets/js/plugins.min.js"></script>
     <script src="../assets/js/common.js"></script>
+    <script>
+        $( document ).ready(function() {
+            $('.hamburger-closer').on('click', function() {
+                window.location.href = '../index.html';
+            });
+        });
+    </script>
 </body>
 
 </html>
