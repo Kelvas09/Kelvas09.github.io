@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>vCard - Post</title>
+
+    <!-- Meta Data -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="author" content="ArtTemplate" />
+    <meta name="description" content="vCard" />
+
+    <!-- Twitter data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ArtTemplates">
+    <meta name="twitter:title" content="vCard">
+    <meta name="twitter:description" content="vCard">
+    <meta name="twitter:image" content="assets/images/social.jpg">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="ArtTemplate" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="your url website" />
+    <meta property="og:image" content="assets/images/social.jpg" />
+    <meta property="og:description" content="vCard" />
+    <meta property="og:site_name" content="vCard" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="shortcut icon" href="../assets/images/favicons/favicon.png" type="image/png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="../assets/styles/style.css" />
+	<link rel="stylesheet" type="text/css" href="../assets/styles/style-dark.css"/>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+    <style>
+        .task-list-item {
+            list-style-type: none;
+        }
+
+        .task-list-item-checkbox {
+            margin-left: -20px;
+            vertical-align: middle;
+        }
+    </style>
+
+</head>
+
+<body class="bg-triangles vscode-body vscode-light">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader__wrap">
+            <div class="circle-pulse">
+                <div class="circle-pulse__1"></div>
+                <div class="circle-pulse__2"></div>
+            </div>
+            <div class="preloader__progress"><span></span></div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-line"></div>
+
+    <main class="main">
+        <div class="container gutter-top">
+            <div class="row sticky-parent">
+                <div class="col-16 col-md-16 col-xl-16">
+                    <div class="box shadow pb-0">
+                        <div class="pb-3">
+                            <header class="header-post">
+                                <div class="header-post__date">Apr 17, 2021</div>
+                                <h1 class="title title--h1">Firebase functions</h1>
+                                <div class="caption-post">
+                                    <p>Firebase is a very complete service offered by Google that allows a large number
+                                        of things</p>
+                                </div>
+                                <div class="header-post__image-wrap">
+                                    <img class="cover lazyload" src="images/firebase_functions/firebase.png" alt="" />
+                                </div>
+                            </header>
+                            <p>Firebase is a very complete service offered by Google that allows a large number of
+                                things:</p>
+                            <ul>
+                                <li>Authentication</li>
+                                <li>Database</li>
+                                <li>Storage</li>
+                                <li>Hosting</li>
+                                <li>Functions</li>
+                                <li>ML Kit</li>
+                                <li>Crashlytics</li>
+                                <li>Performance</li>
+                                <li>Test Lab</li>
+                                <li>...</li>
+                            </ul>
+                            <p>And many other things!</p>
+                            <p>The part we are interested in today is the cloud function.</p>
+                            <p>As you probably know, cloud functions are simple pieces of code executed on demand. They
+                                are generally serveless and can therefore be executed anywhere and at any time without
+                                being repeated in a specific context.</p>
+                            <p>Therefore we will need triggers that will allow us to trigger the execution of a
+                                function. There are very simple triggers such as an HTTP call or database update.</p>
+                            <p>But firebase also offers other types of <a
+                                    href="https://firebase.google.com/docs/functions">triggers</a> that can be used such
+                                as :</p>
+                            <ul>
+                                <li>Cloud Firestore Triggers</li>
+                                <li>Realtime Database Triggers</li>
+                                <li>Remote Config Triggers</li>
+                                <li>Google Analytics for Firebase Triggers</li>
+                                <li>Crashlytics Triggers</li>
+                                <li>Cloud Storage Triggers</li>
+                                <li>Cloud Pub/Sub Triggers</li>
+                                <li>HTTP Triggers</li>
+                            </ul>
+                            <p>So we can imagine a whole bunch of scenarios like sending an email / an automatic
+                                notification to a user when he sends us a crashlytics report due to a bug in our
+                                application, it increases the quality of our application and the user experience but it
+                                costs us almost nothing as a developer.</p>
+                            <p>As a mobile developer and iot I often need an API for my applications. The most common
+                                case is user administration for a website. We want to be able to:</p>
+                            <ul>
+                                <li>list users</li>
+                                <li>creates a new user</li>
+                                <li>disable a user</li>
+                                <li>activate a user</li>
+                            </ul>
+                            <p>It should be noted that cloud functions run NodeJS, so we can use any library we want to
+                                create our API. Express being my favorite is what we're going to use now.</p>
+                            <p>First of all we need to create our Firebase Function project. To do this, place yourself
+                                in a blank folder and execute the following command:</p>
+                            <pre><code><code><div>firebase init
+</div></code></code></pre>
+                            <p>If you do not have to install the firebase tools, execute this command:</p>
+                            <pre><code><code><div>npm install -g firebase-tools
+</div></code></code></pre>
+                            <p>You should see the following choices in front of you:</p>
+                            <p><img class="cover lazyload" src="images/firebase_functions/init.png" alt="" /></p>
+                            <p>Then select your project.</p>
+                            <p>The firebase tools will now create a complete cloud function project ready to be deployed
+                                for you. An <strong>index.js</strong> file will be created. This is the file that will
+                                be executed on the firebase platform. You can create other files but they must always be
+                                used in the <strong>index.js</strong> file.</p>
+                            <p>Like any NodeJS project, we will have a <strong>package.json</strong> file containing all
+                                our dependencies and a <strong>node_modules</strong> folder that will contain all the
+                                downloaded dependencies. So don't forget to execute the command to install the packets:
+                            </p>
+                            <pre><code><code><div>npm i
+</div></code></code></pre>
+                            <p>Let's start by installing express and setting up the exit of a first road:</p>
+                            <pre><code><code><div>npm i express --save
+</div></code></code></pre>
+                            <p>Let's put the following code in the <strong>index.js</strong> file :</p>
+                            <pre><code class="language-js"><div><span class="hljs-keyword">const</span> functions = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;firebase-functions&#x27;</span>);
+<span class="hljs-keyword">const</span> admin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;firebase-admin&#x27;</span>);
+<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;express&#x27;</span>);
+<span class="hljs-keyword">const</span> app = express();
+
+admin.initializeApp();
+</div></code></pre>
+                            <p>The libraries &quot;firebase-functions&quot; and &quot;firebase-admin&quot; will be
+                                necessary for the proper functioning of our API.</p>
+                            <p>Let's create the first endpoint to test our function:</p>
+                            <pre><code class="language-js"><div>app.get(<span class="hljs-string">&#x27;/test&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
+    res.status(<span class="hljs-number">200</span>).send(<span class="hljs-string">&#x27;It works!&#x27;</span>)
+});
+</div></code></pre>
+                            <p>Nothing complicated, just sent us back text from the moment we call the route
+                                <strong>/test</strong>.</p>
+                            <p>We no longer have any cases left where our express app is linked to an endpoint cloud
+                                function. To do this, simply enter this code:</p>
+                            <pre><code class="language-js"><div><span class="hljs-built_in">exports</span>.admin = functions.https.onRequest(app);
+</div></code></pre>
+                            <p><strong>admin</strong> is the name of our cloud function.</p>
+                            <p>To test in real conditions, we will have to deploy our cloud function. To do this, we
+                                just need to execute the following command:</p>
+                            <pre><code><code><div>firebase deploy
+</div></code></code></pre>
+                            <p>You should now see this in the <strong>Dashboard</strong> tab:</p>
+                            <p><img class="cover lazyload" src="images/firebase_functions/functions.png" alt="" /></p>
+                            <p>In this picture, the part in red is the address where you can call your cloud function.
+                                Don't forget to add <strong>/test</strong> in our case for this to work.</p>
+                            <p>Use software such as postman to make our request and test. Everything should work
+                                perfectly. If not, go to the &quot;Logs&quot; tab of the firebase to better understand
+                                what happened.</p>
+                            <h2 id="user-api">User API</h2>
+                            <p>As we said earlier, we want to list users, enable/disable them and be able to create new
+                                ones.</p>
+                            <p>Let's start by creating a new user:</p>
+                            <p>As required by the convention, for a creation we use the POST method.</p>
+                            <pre><code class="language-js"><div>app.post(<span class="hljs-string">&#x27;/createAdmin&#x27;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+    <span class="hljs-keyword">try</span>
+    {
+        <span class="hljs-keyword">const</span> userInDto = dto.createUserInDto(req);
+        <span class="hljs-keyword">await</span> admin.auth().createUser({
+            <span class="hljs-attr">email</span>: userInDto.email,
+            <span class="hljs-attr">emailVerified</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">password</span>: userInDto.password,
+            <span class="hljs-attr">displayName</span>: userInDto.username,
+            <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span>
+        });
+        res.status(<span class="hljs-number">201</span>).send(<span class="hljs-string">&#x27;&#x27;</span>);
+    } <span class="hljs-keyword">catch</span> (ex) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;error&#x27;</span>, ex);
+        res.status(<span class="hljs-number">400</span>).send(
+            dto.createErrorOutDto(
+                <span class="hljs-number">100</span>, 
+                <span class="hljs-string">&#x27;Something goes wrong!&#x27;</span>
+            )
+        );
+    }
+});
+</div></code></pre>
+                            <p>In order to be a little cleaner, I created a dto.js file that contains some very useful
+                                methods to convert incoming data to model and vice versa.</p>
+                            <pre><code class="language-js"><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createUserInDto</span>(<span class="hljs-params">req</span>) </span>{
+    <span class="hljs-keyword">if</span> (req.method !== <span class="hljs-string">&#x27;POST&#x27;</span>) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;request method is not POST&#x27;</span>, req);
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&#x27;Not POST methods&#x27;</span>);
+    }
+    <span class="hljs-keyword">const</span> val = req.body;
+    <span class="hljs-keyword">if</span> (!(<span class="hljs-string">&#x27;username&#x27;</span> <span class="hljs-keyword">in</span> val) ||
+        !(<span class="hljs-string">&#x27;password&#x27;</span> <span class="hljs-keyword">in</span> val) ||
+        !(<span class="hljs-string">&#x27;email&#x27;</span> <span class="hljs-keyword">in</span> val)) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;some data isnt ok&#x27;</span>, val);
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&#x27;Malformed JSON Body&#x27;</span>);
+    }
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">username</span>: val.username,
+        <span class="hljs-attr">password</span>: val.password,
+        <span class="hljs-attr">email</span>: val.email
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createErrorOutDto</span>(<span class="hljs-params">code, ex</span>) </span>{
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">errorCode</span>: code,
+        <span class="hljs-attr">errorMessage</span>: ex
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createFirebaseUserOutDto</span>(<span class="hljs-params">json</span>) </span>{
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">id</span>: json.uid,
+        <span class="hljs-attr">email</span>: json.email,
+        <span class="hljs-attr">username</span>: json.displayName !== <span class="hljs-literal">undefined</span> ? json.displayName : <span class="hljs-string">&#x27;&#x27;</span>,
+        <span class="hljs-attr">disabled</span>: json.disabled,
+    }
+}
+
+<span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">createUserInDto</span>: createUserInDto,
+    <span class="hljs-attr">createErrorOutDto</span>: createErrorOutDto,
+    <span class="hljs-attr">createFirebaseUserOutDto</span>: createFirebaseUserOutDto
+}
+</div></code></pre>
+                            <p>As you can see nothing complicated here, we retrieve the data from the request and use
+                                the <strong>createUser</strong> method of the <strong>firebase-admin</strong> library to
+                                create a new user.</p>
+                            <p>As for the activation or deactivation, nothing more complicated:</p>
+                            <pre><code class="language-js"><div>app.put(<span class="hljs-string">&#x27;/user/enable/:id&#x27;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+    changeUser(req, res, <span class="hljs-literal">true</span>);
+});
+
+app.put(<span class="hljs-string">&#x27;/user/disable/:id&#x27;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+    changeUser(req, res, <span class="hljs-literal">false</span>);
+});
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">changeUser</span>(<span class="hljs-params">req, res, enable</span>) </span>{
+    <span class="hljs-keyword">try</span>
+    {
+        <span class="hljs-keyword">const</span> userId = req.params.id;
+        <span class="hljs-keyword">if</span> (userId === <span class="hljs-literal">undefined</span> || userId === <span class="hljs-literal">null</span>) {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&#x27;userId is not set&#x27;</span>);
+        }
+        <span class="hljs-keyword">await</span> admin.auth().updateUser(userId, {
+            <span class="hljs-attr">disabled</span>: !enable
+        });
+        res.status(<span class="hljs-number">200</span>).send(<span class="hljs-string">&#x27;&#x27;</span>);
+    } <span class="hljs-keyword">catch</span> (ex) {
+        res.status(<span class="hljs-number">400</span>).send(
+            dto.createErrorOutDto(
+                <span class="hljs-number">100</span>, 
+                <span class="hljs-string">&#x27;Something goes wrong!&#x27;</span>
+            )
+        );
+    }
+}
+</div></code></pre>
+                            <p>All we have to do now is list all the users of the database.</p>
+                            <pre><code class="language-js"><div>app.get(<span class="hljs-string">&#x27;/users&#x27;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-keyword">const</span> users = <span class="hljs-keyword">await</span> admin.auth().listUsers();
+        <span class="hljs-keyword">let</span> result = [];
+        users.users.forEach(<span class="hljs-function">(<span class="hljs-params">userRecord</span>) =&gt;</span> {
+            <span class="hljs-keyword">const</span> newUser = dto.createFirebaseUserOutDto(userRecord.toJSON());
+            result.push(newUser);
+        });
+        res.status(<span class="hljs-number">200</span>).send(result);
+    } <span class="hljs-keyword">catch</span> (ex) {
+        res.status(<span class="hljs-number">400</span>).send(
+            dto.createErrorOutDto(
+                <span class="hljs-number">100</span>, 
+                <span class="hljs-string">&#x27;Something goes wrong!&#x27;</span>
+            )
+        );
+    }
+});
+</div></code></pre>
+                            <h2 id="securing-the-api">Securing the API</h2>
+                            <p>We were able to make all the requests we wanted and quite easily. Now it is a question of
+                                securing our API in order to prevent anyone from calling it directly without our
+                                permission. To do this we will simply add an API key.</p>
+                            <p>For that we will add a verification middleware. It will have to be placed before our
+                                requests if we want it to take effect:</p>
+                            <pre><code class="language-js"><div><span class="hljs-keyword">const</span> apiKeyMiddleware = <span class="hljs-function">(<span class="hljs-params">req, res, next</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> apiKeyHeader = req.headers.apikey;
+    <span class="hljs-keyword">if</span> (apiKeyHeader === config.apiKey) {
+        next();
+        <span class="hljs-keyword">return</span>;
+    } <span class="hljs-keyword">else</span> {
+        res.status(<span class="hljs-number">401</span>).send(<span class="hljs-string">&#x27;&#x27;</span>);
+    }
+};
+</div></code></pre>
+                            <p>Replace the <strong>config.apiKey</strong> by the key you want to use.
+                                Then call the middleware:</p>
+                            <pre><code class="language-js"><div>app.use(apiKeyMiddleware);
+</div></code></pre>
+                            <p>You no longer have to call the API with our key in the headers. And here is your API for
+                                firebase users is ready.</p>
+
+                            <footer class="footer-post">
+                                <a class="footer-post__share" href="http://facebook.com"><i
+                                        class="font-icon icon-facebook"></i><span>Facebook</span></a>
+                                <a class="footer-post__share" href="http://twitter.com"><i
+                                        class="font-icon icon-twitter"></i><span>Twitter</span></a>
+                                <a class="footer-post__share" href="http://linkedin.com"><i
+                                        class="font-icon icon-linkedin2"></i><span>Linkedin</span></a>
+                            </footer>
+                        </div>
+                    </div>
+                    <footer class="footer">© 2019 Kévin Sibué</footer>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <div class="back-to-top"></div>
+    <svg class="svg-defs">
+        <clipPath id="avatar-box">
+            <path
+                d="M1.85379 38.4859C2.9221 18.6653 18.6653 2.92275 38.4858 1.85453 56.0986.905299 77.2792 0 94 0c16.721 0 37.901.905299 55.514 1.85453 19.821 1.06822 35.564 16.81077 36.632 36.63137C187.095 56.0922 188 77.267 188 94c0 16.733-.905 37.908-1.854 55.514-1.068 19.821-16.811 35.563-36.632 36.631C131.901 187.095 110.721 188 94 188c-16.7208 0-37.9014-.905-55.5142-1.855-19.8205-1.068-35.5637-16.81-36.63201-36.631C.904831 131.908 0 110.733 0 94c0-16.733.904831-37.9078 1.85379-55.5141z" />
+        </clipPath>
+        <clipPath id="avatar-hexagon">
+            <path
+                d="M0 27.2891c0-4.6662 2.4889-8.976 6.52491-11.2986L31.308 1.72845c3.98-2.290382 8.8697-2.305446 12.8637-.03963l25.234 14.31558C73.4807 18.3162 76 22.6478 76 27.3426V56.684c0 4.6805-2.5041 9.0013-6.5597 11.3186L44.4317 82.2915c-3.9869 2.278-8.8765 2.278-12.8634 0L6.55974 68.0026C2.50414 65.6853 0 61.3645 0 56.684V27.2891z" />
+        </clipPath>
+    </svg>
+    <script src="../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../assets/js/plugins.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+
+</html>
