@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Kotlin Cache Management</title>
+
+    <!-- Meta Data -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="author" content="ArtTemplate" />
+    <meta name="description" content="vCard" />
+
+    <!-- Twitter data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ArtTemplates">
+    <meta name="twitter:title" content="vCard">
+    <meta name="twitter:description" content="vCard">
+    <meta name="twitter:image" content="assets/images/social.jpg">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="ArtTemplate" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="your url website" />
+    <meta property="og:image" content="assets/images/social.jpg" />
+    <meta property="og:description" content="vCard" />
+    <meta property="og:site_name" content="vCard" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="shortcut icon" href="../assets/images/favicons/favicon.png" type="image/png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="../assets/styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/styles/style-dark.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"
+    integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="../assets/styles/solarized-dark.css"/>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+    <style>
+        .task-list-item {
+            list-style-type: none;
+        }
+
+        .task-list-item-checkbox {
+            margin-left: -20px;
+            vertical-align: middle;
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+
+
+</head>
+
+<body class="bg-triangles vscode-body vscode-light">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader__wrap">
+            <div class="circle-pulse">
+                <div class="circle-pulse__1"></div>
+                <div class="circle-pulse__2"></div>
+            </div>
+            <div class="preloader__progress"><span></span></div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-line"></div>
+
+    <main class="main">
+        <div class="container gutter-top">
+            <div class="row sticky-parent">
+                <div class="col-16 col-md-16 col-xl-16">
+                    <div class="box shadow pb-0">
+                        <div class="circle-menu">
+                            <div class="hamburger hamburger-closer is-active">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="pb-3">
+                            <header class="header-post">
+                                <div class="header-post__date">Apr 18, 2021</div>
+                                <h1 class="title title--h1">Kotlin Cache Management</h1>
+                                <div class="caption-post">
+                                    <p>In computer science, we always say that there are two things that are
+                                        complicated: naming variables and managing the cache! And that's absolutely
+                                        true.</p>
+                                </div>
+                                <div class="header-post__image-wrap">
+                                    <img class="cover lazyload" src="images/kotlin_cache_management/kotlin.jpeg"
+                                        alt="" />
+                                </div>
+                            </header>
+
+                            <p>In computer science, we always say that there are two things that are complicated: naming
+                                variables and managing the cache! And that's absolutely true. Unfortunately, this is a
+                                recurring problem in mobility since we must save as much as possible the network
+                                consumption of the mobile device we have in our hands:</p>
+                            <ul>
+                                <li>network loss</li>
+                                <li>weak networks (Edge, 3G,...)</li>
+                                <li>...</li>
+                            </ul>
+                            <p>It is therefore important to know how to manage data caching in order to provide a
+                                meaningful user experience. But again, it will depend on the data:</p>
+                            <p>If you manage more or less static data, such as the product catalogue of a major car
+                                brand, there is no need to refresh the data from the server every 10 seconds or at each
+                                user's request. We can afford to load them only once and keep them as long as the
+                                application is alive the data loaded upstream.</p>
+                            <p>Of course there are also cases where, as in a purchasing application, some data must
+                                constantly be reloaded and the cache is not very efficient.</p>
+                            <p>So first, we will focus on our first case and see how it is possible to set up a cache on
+                                a REST request in Kotlin.</p>
+                            <p>First of all, some dependencies need to be resolved. To develop this small demo
+                                application, we will need:</p>
+                            <ul>
+                                <li>androidx.appcompat:appcompat:1.0.2</li>
+                                <li>androidx.core:core-ktx:1.0.2</li>
+                                <li>androidx.constraintlayout:constraintlayout:1.1.3</li>
+                                <li>com.squareup.retrofit2:retrofit:2.5.0</li>
+                                <li>com.squareup.retrofit2:converter-gson:2.5.0</li>
+                                <li>com.squareup.retrofit2:adapter-rxjava:2.5.0</li>
+                                <li>com.squareup.okhttp3:logging-interceptor:3.12.1</li>
+                                <li>io.reactivex.rxjava2:rxandroid:2.1.1</li>
+                                <li>io.reactivex.rxjava2:rxkotlin:2.3.0</li>
+                                <li>com.squareup.retrofit2:adapter-rxjava2:2.4.0</li>
+                                <li>com.squareup.picasso:picasso:2.71828</li>
+                                <li>androidx.legacy:legacy-support-v4:1.0.0</li>
+                                <li>androidx.recyclerview:recyclerview:1.0.0</li>
+                                <li>android.arch.lifecycle:extensions:1.1.1</li>
+                                <li>androidx.cardview:cardview:1.0.0</li>
+                                <li>jp.wasabeef:picasso-transformations:2.2.1</li>
+                                <li>jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1</li>
+                                <li>com.google.android.material:material:1.0.0</li>
+                            </ul>
+                            <p>Don't forget to synchronize your project via gradle after adding these dependencies.
+                                For this demo, we will use Rick and Morty's free and open API : <a
+                                    href="https://rickandmortyapi.com/">https://rickandmortyapi.com/</a></p>
+                            <p>First, we will display in a list the characters of Rick and Morty but without managing
+                                the pagination. The goal being to obtain something similar to this:</p>
+                            <img><img src="./images/kotlin_cache_management/rick-morty.png"></img></p>
+                            <p>Nothing complicated so far. I won't detail how to get to that but only on how to manage
+                                the cache. If the rest interests you, do not hesitate to consult the <a
+                                    href="https://gitlab.com/KevinSib/kotlin-cache-management-sample">Git</a> of this
+                                article.</p>
+                            <p>To handle all this we're going to need one of an ApiManager managing requests to the API:
+                            </p>
+                            <pre><code class="language-kotlin"><div><span class="hljs-keyword">private</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">val</span> API_BASE_URL = <span class="hljs-string">&quot;https://rickandmortyapi.com/&quot;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ApiManager</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> service: ApiService
+
+    <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ApiService</span> </span>{
+
+        <span class="hljs-meta">@GET(<span class="hljs-meta-string">&quot;api/character&quot;</span>)</span>
+        <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">retrieveCharacters</span><span class="hljs-params">()</span></span>: Single&lt;CharacterResult&gt;
+
+        <span class="hljs-meta">@GET(<span class="hljs-meta-string">&quot;/api/character/{charactId}&quot;</span>)</span>
+        <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">retrieveDetailCharactere</span><span class="hljs-params">(<span class="hljs-meta">@Path(<span class="hljs-meta-string">&quot;charactId&quot;</span>)</span> url: <span class="hljs-type">String</span>)</span></span>: Single&lt;Character&gt;
+
+    }
+
+    <span class="hljs-keyword">init</span> {
+        service = Retrofit.Builder()
+            .baseUrl(API_BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .client(
+                OkHttpClient().newBuilder().addInterceptor(HttpLoggingInterceptor().apply { HttpLoggingInterceptor.Level.BASIC })
+                    .build()
+            ).build()
+            .create(ApiService::<span class="hljs-keyword">class</span>.java)
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">retrieveCharacters</span><span class="hljs-params">()</span></span> = service.retrieveCharacters()
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">retrieveDetailCharacter</span><span class="hljs-params">(url: <span class="hljs-type">String</span>)</span></span> = service.retrieveDetailCharactere(url)
+}
+</div></code></pre>
+                            <p>As you can see, we will use Retrofit (lien YYYY) to manage API calls with an Rx adapter
+                                to manage observables.</p>
+                            <p>Nevertheless, all intelligence will pass through the repository: CharactersRepository and
+                                CharactersCacheRepository. You have understood it one is for API calls as for the other,
+                                it takes care of loading the data from the cache i.e. RAM in our case.</p>
+                            <p>We will therefore need an interface to transparently manage the two repositories :</p>
+                            <pre><code class="language-kotlin"><div><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ICharacterRepository</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getCharacters</span><span class="hljs-params">()</span></span>: Single&lt;CharacterResult&gt;
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getCharacterById</span><span class="hljs-params">(id: <span class="hljs-type">Long</span>)</span></span>: Single&lt;Character&gt;
+}
+</div></code></pre>
+                            <p>So we can now create our two classes:</p>
+                            <pre><code class="language-kotlin"><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CharacterRepository</span></span>(<span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> apiManager: ApiManager): ICharacterRepository {
+
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CharacterCacheRepository</span></span>(
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> delegate: CharacterRepository,
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> characterResCache: ICharacterResultCache
+): ICharacterRepository <span class="hljs-keyword">by</span> delegate {
+
+}
+</div></code></pre>
+                            <p>You will notice the presence of a new <strong>ICharacterCacheResult</strong> interface.
+                                But we'll talk about it later.</p>
+                            <p>As you can see, the principle is the same: We implement the interface. However, there
+                                will be 2 big changes:</p>
+                            <p>The repository managing the cache has no direct link with the ApiManager and we use the
+                                keyword &quot;delegate&quot; for it. But what does this mean?</p>
+                            <p>According to the documentation available on <a
+                                    href="https://kotlinlang.org/docs/reference/delegation.html">Kotlang</a>:</p>
+                            <blockquote>
+                                <p>The Delegation pattern has proven to be a good alternative to implementation
+                                    inheritance, and Kotlin supports it natively requiring zero boilerplate code. A
+                                    class Derived can implement an interface Base by delegating all of its public
+                                    members to a specified object</p>
+                            </blockquote>
+                            <p>The goal is to have a repository that uses another one and not to have 2 repositories
+                                with logic everywhere in our code.</p>
+                            <p>Since each repository manages a particular data, it is possible to define different cache
+                                rules depending on the said data as we have seen previously!</p>
+                            <p>But since both repositories use the same interface, it's totally transparent for the rest
+                                of our code! In this case it is the repository managing the cache that will always be
+                                used. So we reverse the logic: rather than knowing if we are using the cache. By default
+                                we use this one and worry about when to use the network. It is therefore up to him to
+                                know whether or not to use the network depending on the cache he has and the management
+                                rules we want to put in place.</p>
+                            <p>Let's now place directly in the application the instance of our
+                                <strong>CharacterCacheRepository</strong> which will take care of everything:</p>
+                            <pre><code class="language-kotlin"><div><span class="hljs-keyword">lateinit</span> <span class="hljs-keyword">var</span> characterRepository: ICharacterRepository
+
+<span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">()</span></span> {
+    <span class="hljs-keyword">super</span>.onCreate()
+    app = <span class="hljs-keyword">this</span>
+    initInjection()
+}
+
+<span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">initInjection</span><span class="hljs-params">()</span></span> {
+    characterRepository =  CharacterCacheRepository(
+        CharacterRepository(ApiManager()),
+        CharacterResultCache()
+    )
+}
+</div></code></pre>
+                            <p>Don't forget to link your android application to this class.</p>
+                            <pre><code class="language-xml"><div><span class="hljs-tag">&lt;<span class="hljs-name">application</span>
+    <span class="hljs-attr">android:allowBackup</span>=<span class="hljs-string">&quot;true&quot;</span>
+    <span class="hljs-attr">android:icon</span>=<span class="hljs-string">&quot;@mipmap/ic_launcher&quot;</span>
+    <span class="hljs-attr">android:label</span>=<span class="hljs-string">&quot;@string/app_name&quot;</span>
+    <span class="hljs-attr">android:roundIcon</span>=<span class="hljs-string">&quot;@mipmap/ic_launcher_round&quot;</span>
+    <span class="hljs-attr">android:supportsRtl</span>=<span class="hljs-string">&quot;true&quot;</span>
+    <span class="hljs-attr">android:theme</span>=<span class="hljs-string">&quot;@style/AppTheme&quot;</span>
+    <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;.presentation.RMApplication&quot;</span>&gt;</span>
+    ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">application</span>&gt;</span>
+</div></code></pre>
+                            <p>It's time to implement our repository and we'll start with the simplest and the one we
+                                all know <strong>CharacterRepository</strong>:</p>
+                            <pre><code class="language-kotlin"><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CharacterRepository</span></span>(<span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> apiManager: ApiManager): ICharacterRepository {
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getCharacters</span><span class="hljs-params">()</span></span>: Single&lt;CharacterResult&gt; = apiManager.retrieveCharacters()
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getCharacterById</span><span class="hljs-params">(id: <span class="hljs-type">Long</span>)</span></span>: Single&lt;Character&gt; = apiManager.retrieveDetailCharacter(<span class="hljs-string">&quot;<span class="hljs-variable">$id</span>&quot;</span>)
+
+}
+</div></code></pre>
+                            <p>Nothing complicated here, we just use our ApiManager to do the job. No transformation
+                                required in this case.</p>
+                            <p>Do you remember the <strong>ICharacterCacheResult</strong> interface? It's time to take
+                                care of it. In fact we will implement a class with this interface and it is it that will
+                                handle the management of cached data.</p>
+                            <pre><code class="language-kotlin"><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CharacterResultCache</span>: <span class="hljs-type">ICharacterResultCache {</span></span>
+
+    <span class="hljs-keyword">var</span> mResult: CharacterResult? = <span class="hljs-literal">null</span>
+
+    <span class="hljs-keyword">override</span> <span class="hljs-keyword">val</span> hasCharacters: <span class="hljs-built_in">Boolean</span>
+        <span class="hljs-keyword">get</span>() = mResult != <span class="hljs-literal">null</span>
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getResult</span><span class="hljs-params">()</span></span>: CharacterResult? {
+        <span class="hljs-keyword">return</span> mResult
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getCharacter</span><span class="hljs-params">(id: <span class="hljs-type">Long</span>)</span></span>: Maybe&lt;Character&gt; {
+        mResult?.let {
+            <span class="hljs-keyword">val</span> found = it.results.filter {
+                <span class="hljs-keyword">if</span> (it.id == id) {
+                    <span class="hljs-keyword">return</span> Maybe.just(it)
+                }
+                <span class="hljs-keyword">return</span> Maybe.empty()
+            }.first()
+            <span class="hljs-keyword">return</span> Maybe.just(found)
+        }
+        <span class="hljs-keyword">return</span> Maybe.empty()
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getCharacters</span><span class="hljs-params">()</span></span>: List&lt;Character&gt; {
+        mResult?.let {
+            <span class="hljs-keyword">return</span> it.results
+        }
+        <span class="hljs-keyword">return</span> emptyList()
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">setResult</span><span class="hljs-params">(res: <span class="hljs-type">CharacterResult</span>)</span></span> {
+        mResult = res
+    }
+
+}
+</div></code></pre>
+                            <p>We simply need to retrieve the list of characters or a particular character. To do this,
+                                simply analyze the result and save the result of the Http query.</p>
+                            <p>Now let's do the simple version of our cache: If I have cache I send it back otherwise I
+                                make a request, I store the result and I return the result. As a result, at the next
+                                request there will be cache and there will be no need to make a new request to the
+                                server.</p>
+                            <pre><code class="language-kotlin"><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CharacterCacheRepository</span></span>(
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> delegate: CharacterRepository,
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> characterResCache: ICharacterResultCache
+): ICharacterRepository <span class="hljs-keyword">by</span> delegate {
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getCharacters</span><span class="hljs-params">()</span></span>: Single&lt;CharacterResult&gt; {
+        <span class="hljs-keyword">if</span> (characterResCache.hasCharacters) {
+            <span class="hljs-keyword">return</span> Single.create { emitter -&gt;
+                characterResCache.getResult()?.let {
+                    emitter.onSuccess(it)
+                }
+            }
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> delegate.getCharacters().doOnSuccess { characters -&gt;
+                characterResCache.setResult(characters)
+            }
+        }
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getCharacterById</span><span class="hljs-params">(id: <span class="hljs-type">Long</span>)</span></span>: Single&lt;Character&gt; {
+        <span class="hljs-keyword">return</span> characterResCache.getCharacter(id)
+            .switchIfEmpty(delegate.getCharacterById(id))
+    }
+
+}
+</div></code></pre>
+                            <p>All we have to do now is implement the apple in the repository in the viewModel of our
+                                page:</p>
+                            <pre><code class="language-kotlin"><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CharactersViewModel</span> : <span class="hljs-type">BaseViewModel</span></span>() {
+
+    <span class="hljs-keyword">var</span> mItems: MutableLiveData&lt;MutableList&lt;Character&gt;&gt; = MutableLiveData()
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> onSubscribe: Disposable? = <span class="hljs-literal">null</span>
+
+    <span class="hljs-meta">@OnLifecycleEvent(Lifecycle.Event.ON_RESUME)</span>
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onResume</span><span class="hljs-params">()</span></span> {
+        loadData()
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCleared</span><span class="hljs-params">()</span></span> {
+        onSubscribe?.dispose()
+        <span class="hljs-keyword">super</span>.onCleared()
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">loadData</span><span class="hljs-params">()</span></span> {
+        mIsLoading.value = <span class="hljs-literal">true</span>
+        <span class="hljs-keyword">val</span> characterResult: Single&lt;CharacterResult&gt; = RMApplication.app.characterRepository.getCharacters()
+        onSubscribe = characterResult
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeBy(
+                onSuccess = {
+                    mIsLoading.postValue(<span class="hljs-literal">false</span>)
+                    mItems.postValue(it.results.toMutableList())
+                },
+                onError = {
+                    mError.postValue(it)
+                }
+            )
+    }
+
+}
+</div></code></pre>
+                            <p>There you go! You have a cache, some simple, but fully functional! Now it's up to you to
+                                add new conditions to manage the cache of your application.</p>
+                            <p>If you want to see the full code of this application, feel free to visit my <a
+                                    href="https://gitlab.com/KevinSib/kotlin-cache-management-sample">git</a>.</p>
+                            <p>If you wish to discuss the subject, do not hesitate to contact me with a comment ;)</p>
+
+
+                            <footer class="footer-post">
+                                <a class="footer-post__share" href="http://facebook.com"><i
+                                        class="font-icon icon-facebook"></i><span>Facebook</span></a>
+                                <a class="footer-post__share" href="http://twitter.com"><i
+                                        class="font-icon icon-twitter"></i><span>Twitter</span></a>
+                                <a class="footer-post__share" href="http://linkedin.com"><i
+                                        class="font-icon icon-linkedin2"></i><span>Linkedin</span></a>
+                            </footer>
+                        </div>
+                    </div>
+                    <footer class="footer">© 2019 Kévin Sibué</footer>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <div class="back-to-top"></div>
+    <svg class="svg-defs">
+        <clipPath id="avatar-box">
+            <path
+                d="M1.85379 38.4859C2.9221 18.6653 18.6653 2.92275 38.4858 1.85453 56.0986.905299 77.2792 0 94 0c16.721 0 37.901.905299 55.514 1.85453 19.821 1.06822 35.564 16.81077 36.632 36.63137C187.095 56.0922 188 77.267 188 94c0 16.733-.905 37.908-1.854 55.514-1.068 19.821-16.811 35.563-36.632 36.631C131.901 187.095 110.721 188 94 188c-16.7208 0-37.9014-.905-55.5142-1.855-19.8205-1.068-35.5637-16.81-36.63201-36.631C.904831 131.908 0 110.733 0 94c0-16.733.904831-37.9078 1.85379-55.5141z" />
+        </clipPath>
+        <clipPath id="avatar-hexagon">
+            <path
+                d="M0 27.2891c0-4.6662 2.4889-8.976 6.52491-11.2986L31.308 1.72845c3.98-2.290382 8.8697-2.305446 12.8637-.03963l25.234 14.31558C73.4807 18.3162 76 22.6478 76 27.3426V56.684c0 4.6805-2.5041 9.0013-6.5597 11.3186L44.4317 82.2915c-3.9869 2.278-8.8765 2.278-12.8634 0L6.55974 68.0026C2.50414 65.6853 0 61.3645 0 56.684V27.2891z" />
+        </clipPath>
+    </svg>
+    <script src="../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../assets/js/plugins.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.hamburger-closer').on('click', function () {
+                window.location.href = '../index.html';
+            });
+        });
+    </script>
+</body>
+
+</html>

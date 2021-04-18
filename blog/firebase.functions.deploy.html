@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Firebase and Azure DevOps</title>
+
+    <!-- Meta Data -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="author" content="ArtTemplate" />
+    <meta name="description" content="vCard" />
+
+    <!-- Twitter data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ArtTemplates">
+    <meta name="twitter:title" content="vCard">
+    <meta name="twitter:description" content="vCard">
+    <meta name="twitter:image" content="assets/images/social.jpg">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="ArtTemplate" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="your url website" />
+    <meta property="og:image" content="assets/images/social.jpg" />
+    <meta property="og:description" content="vCard" />
+    <meta property="og:site_name" content="vCard" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="shortcut icon" href="../assets/images/favicons/favicon.png" type="image/png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="../assets/styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/styles/style-dark.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"
+        integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="../assets/styles/solarized-dark.css"/>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+    <style>
+        .task-list-item {
+            list-style-type: none;
+        }
+
+        .task-list-item-checkbox {
+            margin-left: -20px;
+            vertical-align: middle;
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+
+
+</head>
+
+<body class="bg-triangles vscode-body vscode-light">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader__wrap">
+            <div class="circle-pulse">
+                <div class="circle-pulse__1"></div>
+                <div class="circle-pulse__2"></div>
+            </div>
+            <div class="preloader__progress"><span></span></div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-line"></div>
+
+    <main class="main">
+        <div class="container gutter-top">
+            <div class="row sticky-parent">
+                <div class="col-16 col-md-16 col-xl-16">
+                    <div class="box shadow pb-0">
+                        <div class="circle-menu">
+                            <div class="hamburger hamburger-closer is-active">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="pb-3">
+                            <header class="header-post">
+                                <div class="header-post__date">Apr 17, 2021</div>
+                                <h1 class="title title--h1">Firebase and Azure DevOps</h1>
+                                <div class="header-post__image-wrap">
+                                    <img class="cover lazyload" src="images/firebase_devops/azure-pipelines-banner.png" alt="" />
+                                </div>
+                            </header>
+
+                            <h1 id="firebase-and-azure-devops">Firebase and Azure DevOps</h1>
+                            <h2 id="firebase">Firebase</h2>
+                            <p>As I have already mentioned in <a href="./firebase.functions.html">this article</a>,
+                                Firebase is a service offered by Google for mobile and web developers to facilitate a
+                                large number of parts of application development:</p>
+                            <ul>
+                                <li>Authentication</li>
+                                <li>NoSql Database</li>
+                                <li>cloud function</li>
+                                <li>Storage (image, video, ...)</li>
+                                <li>Web application hosting</li>
+                                <li>Real-time database</li>
+                                <li>Test lab</li>
+                                <li>Crash reporting in real time</li>
+                                <li>Remote config</li>
+                                <li>Cloud messaging</li>
+                            </ul>
+                            <p>It is therefore a very useful service for the rapid prototyping of an application and
+                                even for an application in production and all this for a very modest price.</p>
+                            <h2 id="azure-devops">Azure DevOps</h2>
+                            <p>Azure DevOps is a service offered by Microsoft and the direct descendant of VSTS and Team
+                                Foundation. It is an online service that allows you to manage a number of things:</p>
+                            <ul>
+                                <li>Backlog management (scrum, agile,...)</li>
+                                <li>Git directory management</li>
+                                <li>Test Plan Management</li>
+                                <li>Artifacts management</li>
+                                <li>Pipeline management</li>
+                            </ul>
+                            <p>All the tools necessary to manage a development team, both from the point of view of the
+                                Product Owner and the developer.</p>
+                            <h2 id="cloud-function">Cloud function</h2>
+                            <h3 id="definition">Definition</h3>
+                            <p>Have you already done cloud functions? If you do not know this is a code that is
+                                triggered according to an event and starts processing. The most frequently encountered
+                                cases are:</p>
+                            <ul>
+                                <li>Sending an email when creating a user</li>
+                                <li>Receiving an http request</li>
+                                <li>Modifying a field in a database</li>
+                            </ul>
+                            <p>The principle of a cloud function is that it is called &quot;serverless&quot;. Therefore,
+                                there is no need to take care of the server that is located and no need to manage the
+                                load, since it is possible to create as many as one trigger triggered.</p>
+                            <p>Many offers exist on the net to create and host cloud function:</p>
+                            <ul>
+                                <li>Microsoft with <strong>Azure Functions</strong></li>
+                                <li>Google with <strong>GCP Cloud Function</strong></li>
+                                <li>Google with <strong>Firebase Function</strong></li>
+                                <li>IBM with <strong>IBM Cloud Function</strong></li>
+                                <li>Parse with <strong>Cloud Code</strong></li>
+                                <li>Amazon with <strong>AWS Lambda</strong></li>
+                                <li>Red Hat with <strong>OpenShift Cloud Function</strong></li>
+                            </ul>
+                            <p>We therefore encounter more and more of them and it becomes important to know this type
+                                of service.</p>
+                            <h3 id="sample">Sample</h3>
+                            <p>To practice a little, we will create a very simple code for the Firebase cloud function.
+                                This function will be placed on an HTTP request.</p>
+                            <pre><code class="language-js"><div><span class="hljs-meta">&#x27;use strict&#x27;</span>;
+
+<span class="hljs-keyword">const</span> functions = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;firebase-functions&#x27;</span>);
+<span class="hljs-keyword">const</span> moment = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;moment&#x27;</span>);
+<span class="hljs-keyword">const</span> cors = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;cors&#x27;</span>)({
+    <span class="hljs-attr">origin</span>: <span class="hljs-literal">true</span>,
+});
+
+<span class="hljs-built_in">exports</span>.date = functions.https.onRequest(<span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
+    <span class="hljs-keyword">return</span> cors(req, res, <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-keyword">let</span> format = req.query.format;
+        <span class="hljs-keyword">if</span> (!format) {
+            format = req.body.format;
+        }
+        <span class="hljs-keyword">const</span> formattedDate = moment().format(format);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Sending Formatted date:&#x27;</span>, formattedDate);
+        res.status(<span class="hljs-number">200</span>).send(formattedDate);
+    });
+});
+</div></code></pre>
+                            <p>The purpose of this code, as simple as it may be, is to return the server date according
+                                to the format sent (via the request or the body). If you have never done a Firebase
+                                cloud function before, that here &quot;exports.date&quot; allows you to expose the cloud
+                                function which will be named &quot;date&quot; and will be present in the url of it.</p>
+                            <p>If you want to have a large number of examples, I invite you to visit Google's GitHub for
+                                Firebase: <a
+                                    href="https://github.com/firebase/functions-samples">https://github.com/firebase/functions-samples</a>
+                            </p>
+                            <h2 id="practice">Practice</h2>
+                            <p>Let's start by creating a new pipeline. For simplicity's sake, I advise you to host your
+                                git directly on DevOps. Select <strong>Azure Repos Git</strong>. If not, choose the
+                                provider that suits you.</p>
+                            <p><img src="./images/firebase_devops/59742b07.png" alt="59742b07.png"></p>
+                            <p>Once you have selected your git, you will be able to select the basic configuration. This
+                                is a simple tool that will pre-construct a yaml script containing a set of pre-defined
+                                tasks for the chosen project type. Of course, everything can be modified at will.</p>
+                            <p>In our case, we will select <strong>Node.js</strong> as you can see below.</p>
+                            <p><img src="./images/firebase_devops/a8ebe67e.png" alt="a8ebe67e.png"></p>
+                            <p>The following script will have been generated. It is interesting but does not yet allow
+                                us to deploy on firebase. To do this, we will have to make some changes.</p>
+                            <pre><code class="language-yaml"><div><span class="hljs-comment"># Node.js</span>
+<span class="hljs-comment"># Build a general Node.js project with npm.</span>
+<span class="hljs-comment"># Add steps that analyze code, save build artifacts, deploy, and more:</span>
+<span class="hljs-comment"># https://docs.microsoft.com/azure/devops/pipelines/languages/javascript</span>
+
+<span class="hljs-attr">trigger:</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">master</span>
+
+<span class="hljs-attr">pool:</span>
+  <span class="hljs-attr">vmImage:</span> <span class="hljs-string">&#x27;ubuntu-latest&#x27;</span>
+
+<span class="hljs-attr">steps:</span>
+<span class="hljs-bullet">-</span> <span class="hljs-attr">task:</span> <span class="hljs-string">NodeTool@0</span>
+  <span class="hljs-attr">inputs:</span>
+    <span class="hljs-attr">versionSpec:</span> <span class="hljs-string">&#x27;10.x&#x27;</span>
+  <span class="hljs-attr">displayName:</span> <span class="hljs-string">&#x27;Install Node.js&#x27;</span>
+
+<span class="hljs-bullet">-</span> <span class="hljs-attr">script:</span> <span class="hljs-string">|
+    npm install
+    npm run build
+</span>  <span class="hljs-attr">displayName:</span> <span class="hljs-string">&#x27;npm install and build&#x27;</span>
+
+</div></code></pre>
+                            <p>The main gap is the set of Firebase commands and in particular firebase deploy:</p>
+                            <pre><code class="language-yaml"><div><span class="hljs-comment"># Node.js</span>
+<span class="hljs-comment"># Build a general Node.js project with npm.</span>
+<span class="hljs-comment"># Add steps that analyze code, save build artifacts, deploy, and more:</span>
+<span class="hljs-comment"># https://docs.microsoft.com/azure/devops/pipelines/languages/javascript</span>
+
+<span class="hljs-attr">trigger:</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">master</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">develop</span>
+
+<span class="hljs-attr">pool:</span>
+  <span class="hljs-attr">vmImage:</span> <span class="hljs-string">&#x27;ubuntu-latest&#x27;</span>
+
+<span class="hljs-attr">steps:</span>
+<span class="hljs-bullet">-</span> <span class="hljs-attr">task:</span> <span class="hljs-string">NodeTool@0</span>
+  <span class="hljs-attr">inputs:</span>
+    <span class="hljs-attr">versionSpec:</span> <span class="hljs-string">&#x27;10.x&#x27;</span>
+  <span class="hljs-attr">displayName:</span> <span class="hljs-string">&#x27;Install Node.js&#x27;</span>
+
+<span class="hljs-bullet">-</span> <span class="hljs-attr">script:</span> <span class="hljs-string">|
+    cd functions
+    npm install -g firebase-tools
+    npm install
+    firebase deploy --token $(firebase-token) --project $(firebase-project) --only functions --force
+</span>  <span class="hljs-attr">displayName:</span> <span class="hljs-string">&#x27;npm install and deploy&#x27;</span>
+</div></code></pre>
+                            <p>As you can see in lines 7 and 8, this pipeline is triggered on a commit (merge in theory:
+                                you don't directly commit to master or develop by pity! 😤) of master as well as
+                                develop. It is up to you to change these values if you want a different behaviour.</p>
+                            <p>As the execution of commands is not related to the OS we are on (vive nodeJs and its
+                                cross compatibility), we will use ubuntu.</p>
+                            <p>As I said earlier, we will need NodeJs to work. This installation will also add NPM. In
+                                the current script I ask for a version 10 of NodeJS, if you are compatible with newer
+                                versions, you can quite let it choose <strong>'latest'</strong>.</p>
+                            <p>Once NodeJS is installed, there is no magic, you will have to execute exactly the same
+                                commands as on your development machine. To do this we need the Firebase tools. Here
+                                again nothing new, we use the command <strong>npm install -g firebase-tools</strong> to
+                                add them.</p>
+                            <p>We then update our node_modules with the command <strong>npm i</strong> or <strong>npm
+                                    install</strong>.</p>
+                            <p>In this case I use JS directly, so there is no need to transpose anything (e. g.
+                                typescript) but it is quite possible for you to do so too. Remember that you are on a
+                                &quot;classic&quot; machine and can therefore add tools.</p>
+                            <p>We can therefore proceed directly to deployment on Firebase. But here a small problem
+                                arises: my credentials.</p>
+                            <p>In theory on your development machine no problem, you enter your credentials on the fly
+                                and they are safe in your head (or worse on a Post-It 😡). But leave them lying around
+                                on a build machine that doesn't belong to you... well, I don't recommend it! Even if
+                                Microsoft does not use them, it is a very bad practice. Therefore, we will use the
+                                &quot;Variables&quot; tab provided for the DevOps tool.</p>
+                            <p>To do this, click on the &quot;Variables&quot; button just above the editing area of the
+                                pipeline script:</p>
+                            <p><img src="./images/firebase_devops/variable.png" alt="6cef3090.png"></p>
+                            <p>You will see the following popup displayed:</p>
+                            <p><img src="./images/firebase_devops/variables.png" alt="30af7aa2.png"></p>
+                            <p>As you can see, I have personally already entered two hidden variables: firebase-project
+                                and firebase token.</p>
+                            <p>You will find them in particular in line 23 of the pipeline script. They are the ones
+                                that allow for safe deployment. This way, if another member of your team has access to
+                                your pipeline but you do not want them to see/use your credentials, it is now possible.
+                            </p>
+                            <p>It is now possible for you to automatically deploy your code on Firebase ! Isn't that
+                                wonderful? If you wish to test it, simply click on the &quot;Run&quot; button located at
+                                the same level as the &quot;Variable&quot; button or save and commit to the trigger
+                                branch(s) of this pipeline.</p>
+                            <p><img src="./images/firebase_devops/b6cedaa4.png" alt="b6cedaa4.png"></p>
+                            <p>Don't forget that Azure DevOps offers you 1800 minutes per month of shared pipeline.
+                                Something to start having fun and even work with 😍.</p>
+
+
+                            <footer class="footer-post">
+                                <a class="footer-post__share" href="http://facebook.com"><i
+                                        class="font-icon icon-facebook"></i><span>Facebook</span></a>
+                                <a class="footer-post__share" href="http://twitter.com"><i
+                                        class="font-icon icon-twitter"></i><span>Twitter</span></a>
+                                <a class="footer-post__share" href="http://linkedin.com"><i
+                                        class="font-icon icon-linkedin2"></i><span>Linkedin</span></a>
+                            </footer>
+                        </div>
+                    </div>
+                    <footer class="footer">© 2019 Kévin Sibué</footer>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <div class="back-to-top"></div>
+    <svg class="svg-defs">
+        <clipPath id="avatar-box">
+            <path
+                d="M1.85379 38.4859C2.9221 18.6653 18.6653 2.92275 38.4858 1.85453 56.0986.905299 77.2792 0 94 0c16.721 0 37.901.905299 55.514 1.85453 19.821 1.06822 35.564 16.81077 36.632 36.63137C187.095 56.0922 188 77.267 188 94c0 16.733-.905 37.908-1.854 55.514-1.068 19.821-16.811 35.563-36.632 36.631C131.901 187.095 110.721 188 94 188c-16.7208 0-37.9014-.905-55.5142-1.855-19.8205-1.068-35.5637-16.81-36.63201-36.631C.904831 131.908 0 110.733 0 94c0-16.733.904831-37.9078 1.85379-55.5141z" />
+        </clipPath>
+        <clipPath id="avatar-hexagon">
+            <path
+                d="M0 27.2891c0-4.6662 2.4889-8.976 6.52491-11.2986L31.308 1.72845c3.98-2.290382 8.8697-2.305446 12.8637-.03963l25.234 14.31558C73.4807 18.3162 76 22.6478 76 27.3426V56.684c0 4.6805-2.5041 9.0013-6.5597 11.3186L44.4317 82.2915c-3.9869 2.278-8.8765 2.278-12.8634 0L6.55974 68.0026C2.50414 65.6853 0 61.3645 0 56.684V27.2891z" />
+        </clipPath>
+    </svg>
+    <script src="../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../assets/js/plugins.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.hamburger-closer').on('click', function () {
+                window.location.href = '../index.html';
+            });
+        });
+    </script>
+</body>
+
+</html>
