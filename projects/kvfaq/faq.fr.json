@@ -1,0 +1,28 @@
+{
+    "items": [
+        {
+            "question": "Comment customiser la cellule d'affichage ?",
+            "response": "Par défaut le framework KVFaq utilise sa propre cellule. Néanmoins, il vous est possible de la modifier en surchargeant la méthode 'faqItemCellName' et en indiquant le nom de la cellule à utiliser. A vous de charger la cellule si celle-ci n'est pas présente dans la tableView."
+        },
+        {
+            "question": "Comment utiliser un fichier local pour la FAQ ?",
+            "response": "Pour ce faire il suffit de surcharger la méthode 'buildLoader' et d'utiliser l'objet fourni par le framework nommé 'KVFaqResourceLoader'."
+        },
+        {
+            "question": "Comment utiliser in fichier distant pour la FAQ ?",
+            "response": "Pour ce faire il suffit de surcharger la méthode 'buildLoader' et d'utiliser l'objet fourni par le framework nommé 'KVFaqUrlLoader'."
+        },
+        {
+            "question": "Comment forcer le rafraîchissement de la FAQ ?",
+            "response": "Il vous est possible de rafraîchir la liste de la FAQ en appelant la méthode 'forceRebuildList'."
+        },
+        {
+            "question": "Comment charger un fichier en fonction de paramètres ?",
+            "response": "Grâce à la méthode 'forceRebuildList' il vous est possible de reconstruire la liste. Si vous utilisez une variable pour sélectionner le nom du fichier ou l'URL de celui-ci, vous pouvez alors afficher une FAQ en fonction de plusieurs paramètres."
+        },
+        {
+            "question": "Je ne veux pas utiliser de fichier JSON. Comment faire pour gérer un nouveau format (ex: XML) ?",
+            "response": "Par défaut le framework utiliser le JSON comme format de données. Il est cependant possible de créer son propre parser en implémentant le protocole 'KVFaqParser' et de surcharger la méthode 'buildParser'"
+        }
+    ]
+}

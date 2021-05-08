@@ -1,0 +1,28 @@
+{
+    "items": [
+        {
+            "question": "How to customize the display cell?",
+            "response": "By default the KVFaq framework uses its own cell. However, you can modify it by overloading the 'faqItemCellName' method and indicating the name of the cell to use. It is up to you to load the cell if it is not present in the tableView."
+        },
+        {
+            "question": "How to use a local file for the FAQ?",
+            "response": "To do so, you just have to overload the 'buildLoader' method and use the object provided by the framework named 'KVFaqResourceLoader'."
+        },
+        {
+            "question": "How to use a remote file for the FAQ?",
+            "response": "To do this you just need to override the 'buildLoader' method and use the object provided by the framework named 'KVFaqUrlLoader'."
+        },
+        {
+            "question": "How to force a refresh of the FAQ?",
+            "response": "You can refresh the FAQ list by calling the 'forceRebuildList' method."
+        },
+        {
+            "question": "How to load a file based on parameters?",
+            "response": "With the 'forceRebuildList' method you can rebuild the list. If you use a variable to select the name of the file or the URL of the file, you can then display a FAQ according to several parameters."
+        },
+        {
+            "question": "I don't want to use a JSON file. How can I manage a new format (e.g. XML)?",
+            "response": "By default the framework uses JSON as data format. It is however possible to create its own parser by implementing the 'KVFaqParser' protocol and overloading the 'buildParser' method."
+        }
+    ]
+}
