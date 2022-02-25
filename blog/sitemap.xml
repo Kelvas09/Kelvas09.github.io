@@ -12,25 +12,14 @@
   
     
       <url>
-            <loc>/</loc>
+            <loc>https://kelvas09.github.io/blog/</loc>
             <lastmod>2022-01-04T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>/posts/</loc>
-            <lastmod>2022-01-04T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>/posts/uitextfield-bug/</loc>
+            <loc>https://kelvas09.github.io/blog/posts/</loc>
             <lastmod>2022-01-04T00:00:00+00:00</lastmod>
           </url>
     
@@ -41,7 +30,18 @@
   
     
       <url>
-            <loc>/posts/macos-xattr-attributes/</loc>
+            <loc>https://kelvas09.github.io/blog/posts/uitextfield-bug/</loc>
+            <lastmod>2022-01-04T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://kelvas09.github.io/blog/posts/macos-xattr-attributes/</loc>
             <lastmod>2022-01-02T00:00:00+00:00</lastmod>
           </url>
     
@@ -52,7 +52,7 @@
   
     
       <url>
-            <loc>/posts/pillars-software-1-on-2/</loc>
+            <loc>https://kelvas09.github.io/blog/posts/pillars-software-1-on-2/</loc>
             <lastmod>2021-07-15T00:00:00+00:00</lastmod>
           </url>
     
@@ -65,7 +65,7 @@
   
     
       <url>
-            <loc>/posts/segmentation-fault-dotnet-linux/</loc>
+            <loc>https://kelvas09.github.io/blog/posts/segmentation-fault-dotnet-linux/</loc>
             <lastmod>2021-07-04T00:00:00+00:00</lastmod>
           </url>
     
@@ -74,7 +74,7 @@
   
     
       <url>
-            <loc>/posts/incomprehensible-errors/</loc>
+            <loc>https://kelvas09.github.io/blog/posts/incomprehensible-errors/</loc>
             <lastmod>2021-06-12T00:00:00+00:00</lastmod>
           </url>
     
@@ -85,7 +85,7 @@
   
     
       <url>
-            <loc>/posts/how-make-good-readme/</loc>
+            <loc>https://kelvas09.github.io/blog/posts/how-make-good-readme/</loc>
             <lastmod>2021-06-05T00:00:00+00:00</lastmod>
           </url>
     
@@ -94,7 +94,7 @@
   
     
       <url>
-            <loc>/posts/swift-async-unit-test/</loc>
+            <loc>https://kelvas09.github.io/blog/posts/swift-async-unit-test/</loc>
             <lastmod>2021-05-31T00:00:00+00:00</lastmod>
           </url>
     
@@ -107,7 +107,7 @@
   
     
       <url>
-            <loc>/posts/kotlin-cache-management/</loc>
+            <loc>https://kelvas09.github.io/blog/posts/kotlin-cache-management/</loc>
             <lastmod>2021-04-19T00:00:00+00:00</lastmod>
           </url>
     
@@ -124,14 +124,14 @@
   
     
       <url>
-            <loc>/posts/firebase-functions/</loc>
+            <loc>https://kelvas09.github.io/blog/posts/firebase-functions/</loc>
             <lastmod>2021-04-18T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>/posts/firebase-azure-devops/</loc>
+            <loc>https://kelvas09.github.io/blog/posts/firebase-azure-devops/</loc>
             <lastmod>2021-04-18T00:00:00+00:00</lastmod>
           </url>
     
@@ -146,7 +146,7 @@
   
     
       <url>
-            <loc>/posts/upload-flutter-googleplay/</loc>
+            <loc>https://kelvas09.github.io/blog/posts/upload-flutter-googleplay/</loc>
             <lastmod>2021-04-18T00:00:00+00:00</lastmod>
           </url>
     
