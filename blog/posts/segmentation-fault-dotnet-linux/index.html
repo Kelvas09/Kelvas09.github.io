@@ -322,9 +322,9 @@
         
           
             <a
-              href="/blog/categories/.net/"
+              href="/blog/categories/net/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >.NET</a
+              >NET</a
             >
           
         
@@ -355,7 +355,7 @@
       
       <div class="min-w-0 min-h-0 max-w-prose">
         
-<img src="/images/../banners/splashjpg.jpeg" alt="Image">
+<img src="https://kelvas09.github.io/blog//images/../banners/splashjpg.jpeg" alt="Image">
 
 <h1 id="segmentation-fault-and-net-on-linux" class="relative group">Segmentation fault and .NET on Linux <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#segmentation-fault-and-net-on-linux" aria-label="Anchor">#</a></span></h1>
 <p>For some time I have re-enabled one of my PC with a good Linux <a href="https://manjaro.org/">Manjaro</a>, it&rsquo;s very convenient to run tens of services continuously without having to leave my Mac on or at home.</p>
@@ -371,7 +371,7 @@
 </code></pre><p>Impossible to create projects. The tool crashes no matter what type of project I want to create. So I start looking for a solution on the Internet. After several ten minutes of research I end up on this link: <a href="https://github.com/dotnet/sdk/issues/11639">https://github.com/dotnet/sdk/issues/11639</a></p>
 <p>They talk about the <strong>DOTNET_CLI_TELEMETRY_OPTOUT</strong> variable which is the cause of the problem. After an attempt on my side the behavior persists. No solution seems to work until I see the comment of <strong>Wowo10</strong> :</p>
 
-<img src="/images/github_comment.png" alt="Image">
+<img src="https://kelvas09.github.io/blog//images/github_comment.png" alt="Image">
 
 <p>And there to the miracle it works! 🎉</p>
 <p>Here are the commands if you need them:</p>

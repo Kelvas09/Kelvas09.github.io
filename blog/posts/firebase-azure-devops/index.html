@@ -397,7 +397,7 @@
       
       <div class="min-w-0 min-h-0 max-w-prose">
         
-<img src="/images/../banners/AzureDevOps.png" alt="Image">
+<img src="https://kelvas09.github.io/blog//images/../banners/AzureDevOps.png" alt="Image">
 
 <h2 id="firebase" class="relative group">Firebase <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#firebase" aria-label="Anchor">#</a></span></h2>
 <p>As I have already mentioned in <a href="https://blog.kelvas.fr/ghost/#/editor/post/613511e39c71b71cf8d08b53">this article</a>, Firebase is a service offered by Google for mobile and web developers to facilitate a large number of parts of application development:</p>
@@ -470,12 +470,12 @@
 <h2 id="practice" class="relative group">Practice <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#practice" aria-label="Anchor">#</a></span></h2>
 <p>Let&rsquo;s start by creating a new pipeline. For simplicity&rsquo;s sake, I advise you to host your git directly on DevOps. Select <strong>Azure Repos Git</strong>. If not, choose the provider that suits you.</p>
 
-<img src="/images/59742b07.png" alt="Image">
+<img src="https://kelvas09.github.io/blog//images/59742b07.png" alt="Image">
 
 <p>Once you have selected your git, you will be able to select the basic configuration. This is a simple tool that will pre-construct a yaml script containing a set of pre-defined tasks for the chosen project type. Of course, everything can be modified at will.</p>
 <p>In our case, we will select <strong>Node.js</strong> as you can see below.</p>
 
-<img src="/images/a8ebe67e.png" alt="Image">
+<img src="https://kelvas09.github.io/blog//images/a8ebe67e.png" alt="Image">
 
 <p>The following script will have been generated. It is interesting but does not yet allow us to deploy on firebase. To do this, we will have to make some changes.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># Node.js</span><span class="w">
@@ -535,17 +535,17 @@
 <p>In theory on your development machine no problem, you enter your credentials on the fly and they are safe in your head (or worse on a Post-It 😡). But leave them lying around on a build machine that doesn&rsquo;t belong to you&hellip; well, I don&rsquo;t recommend it! Even if Microsoft does not use them, it is a very bad practice. Therefore, we will use the &ldquo;Variables&rdquo; tab provided for the DevOps tool.</p>
 <p>To do this, click on the &ldquo;Variables&rdquo; button just above the editing area of the pipeline script:</p>
 
-<img src="/images/variable.png" alt="Image">
+<img src="https://kelvas09.github.io/blog//images/variable.png" alt="Image">
 
 <p>You will see the following popup displayed:</p>
 
-<img src="/images/variables.png" alt="Image">
+<img src="https://kelvas09.github.io/blog//images/variables.png" alt="Image">
 
 <p>As you can see, I have personally already entered two hidden variables: firebase-project and firebase token.</p>
 <p>You will find them in particular in line 23 of the pipeline script. They are the ones that allow for safe deployment. This way, if another member of your team has access to your pipeline but you do not want them to see/use your credentials, it is now possible.</p>
 <p>It is now possible for you to automatically deploy your code on Firebase ! Isn&rsquo;t that wonderful? If you wish to test it, simply click on the &ldquo;Run&rdquo; button located at the same level as the &ldquo;Variable&rdquo; button or save and commit to the trigger branch(s) of this pipeline.</p>
 
-<img src="/images/b6cedaa4.png" alt="Image">
+<img src="https://kelvas09.github.io/blog//images/b6cedaa4.png" alt="Image">
 
 <p>Don&rsquo;t forget that Azure DevOps offers you 1800 minutes per month of shared pipeline. Something to start having fun and even work with 😍.</p>
 
