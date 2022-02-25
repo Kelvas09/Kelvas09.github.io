@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>share on Kelvas blog</title>
+    <link>/tags/share/</link>
+    <description>Recent content in share on Kelvas blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © Kévin Sibué 2022</copyright>
+    <lastBuildDate>Sat, 05 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/share/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to make a good README?</title>
+      <link>/posts/how-make-good-readme/</link>
+      <pubDate>Sat, 05 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/how-make-good-readme/</guid>
+      <description>If you like to share and you make code, you probably have a GitHub, GitLab or other account to share your interesting pieces of code to the world.</description>
+    </item>
+    
+  </channel>
+</rss>

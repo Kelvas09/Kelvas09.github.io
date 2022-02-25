@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>unit test on Kelvas blog</title>
+    <link>/tags/unit-test/</link>
+    <description>Recent content in unit test on Kelvas blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © Kévin Sibué 2022</copyright>
+    <lastBuildDate>Mon, 31 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/unit-test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swift : Async unit tests</title>
+      <link>/posts/swift-async-unit-test/</link>
+      <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/swift-async-unit-test/</guid>
+      <description>In software development there is one thing that is difficult to achieve : quality.</description>
+    </item>
+    
+  </channel>
+</rss>

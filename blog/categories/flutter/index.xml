@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flutter on Kelvas blog</title>
+    <link>/categories/flutter/</link>
+    <description>Recent content in Flutter on Kelvas blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © Kévin Sibué 2022</copyright>
+    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/flutter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upload flutter project on Google Play</title>
+      <link>/posts/upload-flutter-googleplay/</link>
+      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/upload-flutter-googleplay/</guid>
+      <description>Upload flutter projet on Google Play # Have you ever tried flutter?</description>
+    </item>
+    
+  </channel>
+</rss>

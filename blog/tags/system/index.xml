@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>system on Kelvas blog</title>
+    <link>/tags/system/</link>
+    <description>Recent content in system on Kelvas blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © Kévin Sibué 2022</copyright>
+    <lastBuildDate>Sun, 02 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>macOS xattr attributes</title>
+      <link>/posts/macos-xattr-attributes/</link>
+      <pubDate>Sun, 02 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/macos-xattr-attributes/</guid>
+      <description>What is a file attribute?</description>
+    </item>
+    
+  </channel>
+</rss>

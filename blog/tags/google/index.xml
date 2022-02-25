@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google on Kelvas blog</title>
+    <link>/tags/google/</link>
+    <description>Recent content in google on Kelvas blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © Kévin Sibué 2022</copyright>
+    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firebase : Functions</title>
+      <link>/posts/firebase-functions/</link>
+      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/firebase-functions/</guid>
+      <description>Firebase is a very complete service offered by Google that allows a large number of things:</description>
+    </item>
+    
+    <item>
+      <title>Upload flutter project on Google Play</title>
+      <link>/posts/upload-flutter-googleplay/</link>
+      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/upload-flutter-googleplay/</guid>
+      <description>Upload flutter projet on Google Play # Have you ever tried flutter?</description>
+    </item>
+    
+  </channel>
+</rss>

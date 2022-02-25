@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iOS on Kelvas blog</title>
+    <link>/categories/ios/</link>
+    <description>Recent content in iOS on Kelvas blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © Kévin Sibué 2022</copyright>
+    <lastBuildDate>Tue, 04 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/ios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UITextField bug 😱</title>
+      <link>/posts/uitextfield-bug/</link>
+      <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/uitextfield-bug/</guid>
+      <description>You may have already had it but there is a bug on UITextField only on iOS emulators (iPhone and iPad).</description>
+    </item>
+    
+    <item>
+      <title>Swift : Async unit tests</title>
+      <link>/posts/swift-async-unit-test/</link>
+      <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/swift-async-unit-test/</guid>
+      <description>In software development there is one thing that is difficult to achieve : quality.</description>
+    </item>
+    
+  </channel>
+</rss>
