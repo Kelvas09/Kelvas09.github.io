@@ -1,0 +1,119 @@
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-auto-columns: 175px;
+    grid-auto-rows: 175px;
+}
+
+.fullscreen {
+    width: 100vw - 10px;
+    height: 100vh;
+}
+
+.tile {
+    background: blue;
+    border: 1px solid black;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    padding: 16px;
+}
+
+.profile-picture {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-image: url("./assets/img/me.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-me {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.about-me {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.map {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-image: url("./assets/img/map.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.github-app {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    background-image: url("./assets/img/github.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.twitter-app {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    background-image: url("./assets/img/twitter.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 24px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: bold; 
+    line-height: 26.399999618530273px; 
+} 
+
+h3 { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 14px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: bold; 
+    line-height: 15.399999618530273px; 
+} 
+
+body, p { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 14px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 20px; 
+} 
+
+blockquote { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 21px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 30px; 
+} 
+
+pre { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 13px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 18.571430206298828px; 
+}
