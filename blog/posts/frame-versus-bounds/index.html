@@ -13,14 +13,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>UITextField bug 😱 &middot; Kelvas blog</title>
-    <meta name="title" content="UITextField bug 😱 &middot; Kelvas blog" />
+  <title>Swift: bounds vs frame &middot; Kelvas blog</title>
+    <meta name="title" content="Swift: bounds vs frame &middot; Kelvas blog" />
   
   <meta name="description" content="Thinks twice, code once" />
   
   
   
-  <link rel="canonical" href="https://kelvas09.github.io/blog/posts/uitextfield-bug/" />
+  <link rel="canonical" href="https://kelvas09.github.io/blog/posts/frame-versus-bounds/" />
   
   
   
@@ -66,17 +66,17 @@
   
   
   
-  <meta property="og:title" content="UITextField bug 😱" />
-<meta property="og:description" content="You may have already had it but there is a bug on UITextField only on iOS emulators (iPhone and iPad)." />
+  <meta property="og:title" content="Swift: bounds vs frame" />
+<meta property="og:description" content="Have you ever made an iOS app with UIKit?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kelvas09.github.io/blog/posts/uitextfield-bug/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-01-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-01-04T00:00:00+00:00" /><meta property="og:site_name" content="Kelvas blog" />
+<meta property="og:url" content="https://kelvas09.github.io/blog/posts/frame-versus-bounds/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-02-27T00:00:00+00:00" /><meta property="og:site_name" content="Kelvas blog" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="UITextField bug 😱"/>
-<meta name="twitter:description" content="You may have already had it but there is a bug on UITextField only on iOS emulators (iPhone and iPad)."/>
+<meta name="twitter:title" content="Swift: bounds vs frame"/>
+<meta name="twitter:description" content="Have you ever made an iOS app with UIKit?"/>
 
   
   <script type="application/ld+json">
@@ -84,26 +84,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "UITextField bug 😱",
-    "headline": "UITextField bug 😱",
+    "name": "Swift: bounds vs frame",
+    "headline": "Swift: bounds vs frame",
     
-    "abstract": "You may have already had it but there is a bug on UITextField only on iOS emulators (iPhone and iPad).",
+    "abstract": "Have you ever made an iOS app with UIKit?",
     "inLanguage": "en",
-    "url" : "https:\/\/kelvas09.github.io\/blog\/posts\/uitextfield-bug\/",
+    "url" : "https:\/\/kelvas09.github.io\/blog\/posts\/frame-versus-bounds\/",
     "author" : {
       "@type": "Person",
       "name": "Kelvas"
     },
     "copyrightYear": "2022",
-    "dateCreated": "2022-01-04T00:00:00\u002b00:00",
-    "datePublished": "2022-01-04T00:00:00\u002b00:00",
+    "dateCreated": "2022-02-27T00:00:00\u002b00:00",
+    "datePublished": "2022-02-27T00:00:00\u002b00:00",
     
-    "dateModified": "2022-01-04T00:00:00\u002b00:00",
+    "dateModified": "2022-02-27T00:00:00\u002b00:00",
     
-    "keywords": ["swift","emulator","bug"],
+    "keywords": ["swift","uikit"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "156"
+    "wordCount": "313"
   }]
   </script>
 
@@ -261,8 +261,8 @@
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/blog/posts/uitextfield-bug/"
-      >UITextField bug 😱</a
+      href="/blog/posts/frame-versus-bounds/"
+      >Swift: bounds vs frame</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -271,7 +271,7 @@
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        UITextField bug 😱
+        Swift: bounds vs frame
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -308,7 +308,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2022-01-04 00:00:00 &#43;0000 UTC">4 January 2022</time><span class="px-2 text-primary-500">&middot;</span><span>156 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2022-02-27 00:00:00 &#43;0000 UTC">27 February 2022</time><span class="px-2 text-primary-500">&middot;</span><span>313 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
     
 
     
@@ -338,15 +338,9 @@
             >
           
             <a
-              href="/blog/tags/emulator/"
+              href="/blog/tags/uikit/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >emulator</a
-            >
-          
-            <a
-              href="/blog/tags/bug/"
-              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >bug</a
+              >uikit</a
             >
           
         
@@ -360,20 +354,29 @@
     <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        
-<img src="https://kelvas09.github.io/blog//images/../banners/splash-1.jpg" alt="Image">
-
-<p>You may have already had it but there is a bug on UITextField only on iOS emulators (iPhone and iPad). It may happen that when you select a UITextField your application freezes like the picture below:</p>
-
-<img src="https://kelvas09.github.io/blog//images/uitextfield_bug-1%201.png" alt="Image">
-
-<p>Now that your application looks like this, you cannot do anything and you have to restart your application.</p>
-<center><iframe src="https://giphy.com/embed/s4Bi420mMDRBK" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/scene-unexpected-visitor-s4Bi420mMDRBK">via GIPHY</a></p></center>
-<p>This is a bug known by the Apple team and originally seemed to affect only the iOS 13 version. But I can confirm that I also encountered it on emulators with version 14.</p>
-<p>But I reassure you, nothing comes from your code but from the emulator itself. So even if you are not anative developer, you may encounter this problem, as here for NativeScript :</p>
-<p>![https://github.com/NativeScript/NativeScript/issues/7919#issue-504001839]</p>
-<p>But then how to solve it?</p>
-<p>Well, it&rsquo;s very simple! Just restart your emulator.I hope this helped you and that unlike me, you won&rsquo;t spend 2 hours looking for a solution in your code.</p>
+        <p>Have you ever made an iOS app with UIKit? Have you ever made your own views? Customized a user control or a view?</p>
+<p>Then you have probably already been in contact with the <em><a href="https://developer.apple.com/documentation/uikit/uiview/1622621-frame">frames</a></em> and <em><a href="https://developer.apple.com/documentation/uikit/uiview/1622580-bounds">bounds</a></em>. But how well do you know them? Do you really know the difference between the two?</p>
+<p>I noticed that for many the answer was: <strong>No</strong>.</p>
+<p>So let&rsquo;s go back to these notions to learn more.</p>
+<p>If we look at the documentation of the two properties, we notice that their declaration is identical except for the name :</p>
+<p><strong>Frame:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">var</span> <span class="nv">frame</span><span class="p">:</span> <span class="n">CGRect</span> <span class="p">{</span> <span class="kr">get</span> <span class="kr">set</span> <span class="p">}</span>
+</code></pre></div><p><strong>Bounds:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">var</span> <span class="nv">bounds</span><span class="p">:</span> <span class="n">CGRect</span> <span class="p">{</span> <span class="kr">get</span> <span class="kr">set</span> <span class="p">}</span>
+</code></pre></div><p>Note that both properties return a structure of type <a href="https://developer.apple.com/documentation/coregraphics/cgrect">CGRect</a>. This one simply represents a rectangle in memory, that is to say 4 essential information: X, Y, width and height.</p>
+<p>But then where is the difference?</p>
+<p>If we look at the documentation of <strong>frame</strong>, it says this :</p>
+<blockquote>
+<p>The frame rectangle, which describes the view’s location and size in its superview’s coordinate system.</p>
+</blockquote>
+<p>Note the importance of the end of the sentence: <strong>its superview&rsquo;s coordinate system</strong>. This is not at all what is specified for the other property:</p>
+<blockquote>
+<p>The bounds rectangle, which describes the view’s location and size in its own coordinate system.</p>
+</blockquote>
+<p>What does this mean in reality?</p>
+<p>It&rsquo;s quite simple really, the <strong>bounds</strong> will have the coordinates relative to itself and will therefore have an X and a Y always equal to 0. While the <strong>frame</strong> will take these coordinates relative to its parent in the view hierarchy.</p>
+<p>It is therefore important to refer to the frame if you want to have the position of the view, the bounds does not know the hierarchy of the view.</p>
+<p>However, for the width and height, you can look at either one or the other. When one value is updated, the other is also updated.</p>
 
       </div>
     </section>
@@ -490,7 +493,7 @@
       
         <a
           class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
-          href="https://www.facebook.com/sharer/sharer.php?u=https://kelvas09.github.io/blog/posts/uitextfield-bug/&amp;quote=UITextField%20bug%20%f0%9f%98%b1"
+          href="https://www.facebook.com/sharer/sharer.php?u=https://kelvas09.github.io/blog/posts/frame-versus-bounds/&amp;quote=Swift:%20bounds%20vs%20frame"
           title="Share on Facebook"
           aria-label="Share on Facebook"
           >
@@ -506,7 +509,7 @@
       
         <a
           class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
-          href="https://twitter.com/intent/tweet/?url=https://kelvas09.github.io/blog/posts/uitextfield-bug/&amp;text=UITextField%20bug%20%f0%9f%98%b1"
+          href="https://twitter.com/intent/tweet/?url=https://kelvas09.github.io/blog/posts/frame-versus-bounds/&amp;text=Swift:%20bounds%20vs%20frame"
           title="Tweet on Twitter"
           aria-label="Tweet on Twitter"
           >
@@ -522,7 +525,7 @@
       
         <a
           class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
-          href="https://pinterest.com/pin/create/bookmarklet/?url=https://kelvas09.github.io/blog/posts/uitextfield-bug/&amp;description=UITextField%20bug%20%f0%9f%98%b1"
+          href="https://pinterest.com/pin/create/bookmarklet/?url=https://kelvas09.github.io/blog/posts/frame-versus-bounds/&amp;description=Swift:%20bounds%20vs%20frame"
           title="Pin on Pinterest"
           aria-label="Pin on Pinterest"
           >
@@ -538,7 +541,7 @@
       
         <a
           class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
-          href="https://reddit.com/submit/?url=https://kelvas09.github.io/blog/posts/uitextfield-bug/&amp;resubmit=true&amp;title=UITextField%20bug%20%f0%9f%98%b1"
+          href="https://reddit.com/submit/?url=https://kelvas09.github.io/blog/posts/frame-versus-bounds/&amp;resubmit=true&amp;title=Swift:%20bounds%20vs%20frame"
           title="Submit to Reddit"
           aria-label="Submit to Reddit"
           >
@@ -554,7 +557,7 @@
       
         <a
           class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
-          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://kelvas09.github.io/blog/posts/uitextfield-bug/&amp;title=UITextField%20bug%20%f0%9f%98%b1"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://kelvas09.github.io/blog/posts/frame-versus-bounds/&amp;title=Swift:%20bounds%20vs%20frame"
           title="Share on LinkedIn"
           aria-label="Share on LinkedIn"
           >
@@ -570,7 +573,7 @@
       
         <a
           class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
-          href="mailto:?body=https://kelvas09.github.io/blog/posts/uitextfield-bug/&amp;subject=UITextField%20bug%20%f0%9f%98%b1"
+          href="mailto:?body=https://kelvas09.github.io/blog/posts/frame-versus-bounds/&amp;subject=Swift:%20bounds%20vs%20frame"
           title="Send via email"
           aria-label="Send via email"
           >
@@ -596,7 +599,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group" href="/blog/posts/macos-xattr-attributes/">
+            <a class="flex group" href="/blog/posts/uitextfield-bug/">
               <span
                 class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -608,11 +611,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >macOS xattr attributes</span
+                  >UITextField bug 😱</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2022-01-02 00:00:00 &#43;0000 UTC">2 January 2022</time>
+                    <time datetime="2022-01-04 00:00:00 &#43;0000 UTC">4 January 2022</time>
                   
                 </span>
               </span>
@@ -620,28 +623,6 @@
           
         </span>
         <span>
-          
-            <a class="flex text-right group" href="/blog/posts/frame-versus-bounds/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Swift: bounds vs frame</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2022-02-27 00:00:00 &#43;0000 UTC">27 February 2022</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
           
         </span>
       </div>
@@ -653,6 +634,19 @@
     
   </article>
 
+      
+        <div
+          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
+        >
+          <a
+            href="#the-top"
+            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
       
     </main>
     <div

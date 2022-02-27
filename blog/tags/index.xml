@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Kévin Sibué 2022</copyright>
-    <lastBuildDate>Tue, 04 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kelvas09.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kelvas09.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>swift</title>
+      <link>https://kelvas09.github.io/blog/tags/swift/</link>
+      <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kelvas09.github.io/blog/tags/swift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uikit</title>
+      <link>https://kelvas09.github.io/blog/tags/uikit/</link>
+      <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kelvas09.github.io/blog/tags/uikit/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>bug</title>
       <link>https://kelvas09.github.io/blog/tags/bug/</link>
@@ -23,15 +41,6 @@
       <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://kelvas09.github.io/blog/tags/emulator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>swift</title>
-      <link>https://kelvas09.github.io/blog/tags/swift/</link>
-      <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://kelvas09.github.io/blog/tags/swift/</guid>
       <description></description>
     </item>
     
