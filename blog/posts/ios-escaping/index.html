@@ -13,14 +13,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Swift: bounds vs frame &middot; Kelvas blog</title>
-    <meta name="title" content="Swift: bounds vs frame &middot; Kelvas blog" />
+  <title>Swift: @escaping &middot; Kelvas blog</title>
+    <meta name="title" content="Swift: @escaping &middot; Kelvas blog" />
   
   <meta name="description" content="Thinks twice, code once" />
   
   
   
-  <link rel="canonical" href="https://kelvas09.github.io/blog/posts/frame-versus-bounds/" />
+  <link rel="canonical" href="https://kelvas09.github.io/blog/posts/ios-escaping/" />
   
   
   
@@ -66,17 +66,17 @@
   
   
   
-  <meta property="og:title" content="Swift: bounds vs frame" />
-<meta property="og:description" content="Have you ever made an iOS app with UIKit?" />
+  <meta property="og:title" content="Swift: @escaping" />
+<meta property="og:description" content="Do you know the @escaping statement in Swift?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kelvas09.github.io/blog/posts/frame-versus-bounds/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-02-27T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-02-27T00:00:00+00:00" /><meta property="og:site_name" content="Kelvas blog" />
+<meta property="og:url" content="https://kelvas09.github.io/blog/posts/ios-escaping/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-03-03T00:00:00+00:00" /><meta property="og:site_name" content="Kelvas blog" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Swift: bounds vs frame"/>
-<meta name="twitter:description" content="Have you ever made an iOS app with UIKit?"/>
+<meta name="twitter:title" content="Swift: @escaping"/>
+<meta name="twitter:description" content="Do you know the @escaping statement in Swift?"/>
 
   
   <script type="application/ld+json">
@@ -84,26 +84,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Swift: bounds vs frame",
-    "headline": "Swift: bounds vs frame",
+    "name": "Swift: @escaping",
+    "headline": "Swift: @escaping",
     
-    "abstract": "Have you ever made an iOS app with UIKit?",
+    "abstract": "Do you know the @escaping statement in Swift?",
     "inLanguage": "en",
-    "url" : "https:\/\/kelvas09.github.io\/blog\/posts\/frame-versus-bounds\/",
+    "url" : "https:\/\/kelvas09.github.io\/blog\/posts\/ios-escaping\/",
     "author" : {
       "@type": "Person",
       "name": "Kelvas"
     },
     "copyrightYear": "2022",
-    "dateCreated": "2022-02-27T00:00:00\u002b00:00",
-    "datePublished": "2022-02-27T00:00:00\u002b00:00",
+    "dateCreated": "2022-03-03T00:00:00\u002b00:00",
+    "datePublished": "2022-03-03T00:00:00\u002b00:00",
     
-    "dateModified": "2022-02-27T00:00:00\u002b00:00",
+    "dateModified": "2022-03-03T00:00:00\u002b00:00",
     
-    "keywords": ["swift","uikit"],
+    "keywords": ["swift"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "313"
+    "wordCount": "833"
   }]
   </script>
 
@@ -127,6 +127,12 @@
   
   
   
+
+  
+  
+  
+  
+  <script defer type="text/javascript" src="/blog/js/mermaid.bundle.243554d3b9eb2870a67f711d05a2d89d95f46facda52cb3bff88625ec3fe69574f993c945c9f29f538a439c0d9a94062fe57456ef046866a651cbf5648514593.js" integrity="sha512-JDVU07nrKHCmf3EdBaLYnZX0b6zaUss7/4hiXsP&#43;aVdPmTyUXJ8p9TikOcDZqUBi/ldFbvBGhmplHL9WSFFFkw=="></script>
 
 
 
@@ -261,8 +267,8 @@
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/blog/posts/frame-versus-bounds/"
-      >Swift: bounds vs frame</a
+      href="/blog/posts/ios-escaping/"
+      >Swift: @escaping</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -271,7 +277,7 @@
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Swift: bounds vs frame
+        Swift: @escaping
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -308,7 +314,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2022-02-27 00:00:00 &#43;0000 UTC">27 February 2022</time><span class="px-2 text-primary-500">&middot;</span><span>313 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+      <time datetime="2022-03-03 00:00:00 &#43;0000 UTC">3 March 2022</time><span class="px-2 text-primary-500">&middot;</span><span>833 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -337,12 +343,6 @@
               >swift</a
             >
           
-            <a
-              href="/blog/tags/uikit/"
-              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >uikit</a
-            >
-          
         
       
     </div>
@@ -353,30 +353,165 @@
     </header>
     <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
       
+        <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+          <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
+            <details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 lg:mt-3">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700"
+  >
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600"
+  >
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-notion-of-asynchronism">The notion of asynchronism</a></li>
+    <li><a href="#but-why-escaping">But why @escaping?</a></li>
+    <li><a href="#the-scope">The scope</a></li>
+    <li><a href="#the-case-of-self-in-an-escaped-closure">The case of self in an escaped closure</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
       <div class="min-w-0 min-h-0 max-w-prose">
-        <p>Have you ever made an iOS app with UIKit? Have you ever made your own views? Customized a user control or a view?</p>
-<p>Then you have probably already been in contact with the <em><a href="https://developer.apple.com/documentation/uikit/uiview/1622621-frame">frames</a></em> and <em><a href="https://developer.apple.com/documentation/uikit/uiview/1622580-bounds">bounds</a></em>. But how well do you know them? Do you really know the difference between the two?</p>
-<p>I noticed that for many the answer was: <strong>No</strong>.</p>
-<p>So let&rsquo;s go back to these notions to learn more.</p>
-<p>If we look at the documentation of the two properties, we notice that their declaration is identical except for the name :</p>
-<p><strong>Frame:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">var</span> <span class="nv">frame</span><span class="p">:</span> <span class="n">CGRect</span> <span class="p">{</span> <span class="kr">get</span> <span class="kr">set</span> <span class="p">}</span>
-</code></pre></div><p><strong>Bounds:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">var</span> <span class="nv">bounds</span><span class="p">:</span> <span class="n">CGRect</span> <span class="p">{</span> <span class="kr">get</span> <span class="kr">set</span> <span class="p">}</span>
-</code></pre></div><p>Note that both properties return a structure of type <a href="https://developer.apple.com/documentation/coregraphics/cgrect">CGRect</a>. This one simply represents a rectangle in memory, that is to say 4 essential information: X, Y, width and height.</p>
-<p>But then where is the difference?</p>
-<p>If we look at the documentation of <strong>frame</strong>, it says this :</p>
-<blockquote>
-<p>The frame rectangle, which describes the view’s location and size in its superview’s coordinate system.</p>
-</blockquote>
-<p>Note the importance of the end of the sentence: <strong>its superview&rsquo;s coordinate system</strong>. This is not at all what is specified for the other property:</p>
-<blockquote>
-<p>The bounds rectangle, which describes the view’s location and size in its own coordinate system.</p>
-</blockquote>
-<p>What does this mean in reality?</p>
-<p>It&rsquo;s quite simple really, the <strong>bounds</strong> will have the coordinates relative to itself and will therefore have an X and a Y always equal to 0. While the <strong>frame</strong> will take these coordinates relative to its parent in the view hierarchy.</p>
-<p>It is therefore important to refer to the frame if you want to have the position of the view, the bounds does not know the hierarchy of the view.</p>
-<p>However, for the width and height, you can look at either one or the other. When one value is updated, the other is also updated.</p>
+        <p>Do you know the <code>@escaping</code> statement in Swift? The compiler creates an error asking you to add it but you don&rsquo;t know why?</p>
+<p>Don&rsquo;t worry, we&rsquo;ll figure it out together.</p>
+<h2 id="the-notion-of-asynchronism" class="relative group">The notion of asynchronism <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-notion-of-asynchronism" aria-label="Anchor">#</a></span></h2>
+<p>With the latest versions of Swift, it is possible to use the async and await keywords to handle asynchronism in our application. But if you have coded applications with older versions of Swift, you probably use closures/callbacks for your asynchronous methods:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">getData</span><span class="p">(</span><span class="n">closure</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">((</span><span class="kc">_</span> <span class="n">data</span><span class="p">:</span> <span class="n">Data</span><span class="p">?,</span> <span class="kc">_</span> <span class="n">error</span><span class="p">:</span> <span class="n">Error</span><span class="p">?)-&gt;()))</span> <span class="p">{</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div><p>In this piece of code we&rsquo;re going to call a method that is itself asynchronous to retrieve remote data and therefore with a certain delay.</p>
+<p>If we use URLSession we could have a code like this one:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="nc">Foundation</span>
+
+<span class="kd">func</span> <span class="nf">getData</span><span class="p">(</span><span class="n">closure</span><span class="p">:</span> <span class="p">((</span><span class="kc">_</span> <span class="n">data</span><span class="p">:</span> <span class="nb">String</span><span class="p">?,</span> <span class="kc">_</span> <span class="n">error</span><span class="p">:</span> <span class="n">Error</span><span class="p">?)-&gt;()))</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">url</span> <span class="p">=</span> <span class="n">URL</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="s">&#34;https://www.myWebsite.com/myApi&#34;</span><span class="p">)</span><span class="o">!</span>
+    <span class="kd">let</span> <span class="nv">task</span> <span class="p">=</span> <span class="n">URLSession</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">dataTask</span><span class="p">(</span><span class="n">with</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span> <span class="p">{</span> <span class="n">data</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+        <span class="k">if</span> <span class="kd">let</span> <span class="nv">error</span> <span class="p">=</span> <span class="n">error</span> <span class="p">{</span>
+            <span class="n">closure</span><span class="p">(</span><span class="kc">nil</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="kd">let</span> <span class="nv">data</span> <span class="p">=</span> <span class="n">data</span><span class="p">,</span> <span class="kd">let</span> <span class="nv">string</span> <span class="p">=</span> <span class="nb">String</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="n">encoding</span><span class="p">:</span> <span class="p">.</span><span class="n">utf8</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">closure</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">task</span><span class="p">.</span><span class="n">resume</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="but-why-escaping" class="relative group">But why @escaping? <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#but-why-escaping" aria-label="Anchor">#</a></span></h2>
+<p>You note that in the above code it is necessary to use <code>@escaping</code> without which the compiler displays this error:</p>
+
+<img src="https://kelvas09.github.io/blog//images/escaping_error.png" alt="Image">
+
+<p>But then how does this call differ from this one:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="n">values</span><span class="p">:</span> <span class="p">[</span><span class="nb">String</span><span class="p">],</span> <span class="n">closure</span><span class="p">:</span> <span class="p">((</span><span class="kc">_</span> <span class="n">value</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span><span class="p">))</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="nb">String</span><span class="p">]</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">result</span><span class="p">:</span> <span class="p">[</span><span class="nb">String</span><span class="p">]</span> <span class="p">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">value</span> <span class="k">in</span> <span class="n">values</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nv">isValid</span> <span class="p">=</span> <span class="n">closure</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">isValid</span> <span class="p">{</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span>
+<span class="p">}</span>
+</code></pre></div><p>In both cases we use a closure but then why in one case we need <code>@escaping</code> and not in the other?</p>
+<h2 id="the-scope" class="relative group">The scope <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-scope" aria-label="Anchor">#</a></span></h2>
+<p>In the case of our backward method the closure is not marked as <code>@escaping</code> because the closure is used directly by our method. It does not change scope.</p>
+<p>On the other hand it is the case for our method <code>getData</code>. We give our closure to another scope. This one will change scope. We then say that it escapes from its scope because it continues to exist after the method has been run.</p>
+<p>The compiler then needs to know that the closure will leave its original scope and that we know how to manage the particular cases that result from this: access to the <code>self</code> variable within the closure for example.</p>
+<h2 id="the-case-of-self-in-an-escaped-closure" class="relative group">The case of self in an escaped closure <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-case-of-self-in-an-escaped-closure" aria-label="Anchor">#</a></span></h2>
+<p>As we said before, a closure noted <code>@escaping</code> will continue to exist after the end of the method.</p>
+<p>Now a closure is simply an anonymous method owned by a class and which can therefore call the <code>self</code> variable at will.</p>
+<p>But at what risk?</p>
+<p>Unlike a non-escaped closure, it is necessary to specify <code>self</code> before any method or property belonging to the class containing the closure.</p>
+<p>Why is this?</p>
+<p>Well, simply because <code>self</code> becomes a reference to the scope and must be retained, this is what we call strong references.</p>
+<p>Let&rsquo;s take a simple example:</p>
+<div class="mermaid" align="center">
+  
+classDiagram
+    class RecipeViewModel {
+        + onRefresh()
+    }
+    class RecipeRepository {
+        + getRecipes(closure: @escaping ...)
+    }
+    RecipeViewModel "0" --> "1" RecipeRepository: own
+
+</div>
+
+<p>The <code>RecipeViewModel</code> class therefore has an instance of the <code>RecipeRepository</code> class. The latter is responsible for communicating with the API to retrieve the data we are interested in.</p>
+<p>Let&rsquo;s start by defining our repository:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kr">final</span> <span class="kd">class</span> <span class="nc">RecipeRepository</span> <span class="p">{</span>
+    
+    <span class="kd">func</span> <span class="nf">getData</span><span class="p">(</span><span class="n">closure</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">((</span><span class="kc">_</span> <span class="n">data</span><span class="p">:</span> <span class="nb">String</span><span class="p">?,</span> <span class="kc">_</span> <span class="n">error</span><span class="p">:</span> <span class="n">Error</span><span class="p">?)-&gt;()))</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nv">url</span> <span class="p">=</span> <span class="n">URL</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="s">&#34;https://www.myWebsite.com/myApi&#34;</span><span class="p">)</span><span class="o">!</span>
+        <span class="kd">let</span> <span class="nv">task</span> <span class="p">=</span> <span class="n">URLSession</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">dataTask</span><span class="p">(</span><span class="n">with</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span> <span class="p">{</span> <span class="n">data</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="kd">let</span> <span class="nv">error</span> <span class="p">=</span> <span class="n">error</span> <span class="p">{</span>
+                <span class="n">closure</span><span class="p">(</span><span class="kc">nil</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+                <span class="k">return</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="kd">let</span> <span class="nv">data</span> <span class="p">=</span> <span class="n">data</span><span class="p">,</span> <span class="kd">let</span> <span class="nv">string</span> <span class="p">=</span> <span class="nb">String</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="n">encoding</span><span class="p">:</span> <span class="p">.</span><span class="n">utf8</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">closure</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">task</span><span class="p">.</span><span class="n">resume</span><span class="p">()</span>
+    <span class="p">}</span>
+    
+<span class="p">}</span>
+</code></pre></div><div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+  <span class="ltr:pr-3 rtl:pl-3 text-primary-400">
+    
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path></svg>
+  </span>
+
+
+  </span>
+  <span class="dark:text-neutral-300"><strong>Information</strong> Note that the closure is noted <code>@escaping</code>.</span>
+</div>
+
+<p>When calling the <code>onRefresh</code> method of the viewModel, the data will be retrieved:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kr">final</span> <span class="kd">class</span> <span class="nc">RecipeViewModel</span> <span class="p">{</span>
+    
+    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">repository</span><span class="p">:</span> <span class="n">RecipeRepository</span>
+    
+    <span class="kd">init</span><span class="p">(</span><span class="n">repository</span><span class="p">:</span> <span class="n">RecipeRepository</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">repository</span> <span class="p">=</span> <span class="n">repository</span>
+    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">onRefresh</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">repository</span><span class="p">.</span><span class="n">getData</span> <span class="p">{</span> <span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">String</span><span class="p">?,</span> <span class="n">error</span><span class="p">:</span> <span class="n">Error</span><span class="p">?)</span> <span class="k">in</span>
+            <span class="k">guard</span> <span class="kd">let</span> <span class="nv">data</span> <span class="p">=</span> <span class="n">data</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="kc">self</span><span class="p">.</span><span class="n">displayError</span><span class="p">()</span>
+                <span class="k">return</span>
+            <span class="p">}</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">updateUI</span><span class="p">(</span><span class="n">with</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">displayError</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//    Do something</span>
+    <span class="p">}</span>
+    
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">updateUI</span><span class="p">(</span><span class="n">with</span> <span class="n">data</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//    Do something</span>
+    <span class="p">}</span>
+    
+<span class="p">}</span>
+</code></pre></div><p>As you can see we use <code>self</code> in the closure. This is a strong reference to our closure, so this element must not be deallocated until the end of the closure. <code>RecipeViewModel</code> becomes a strong reference to <code>RecipeRepository</code>.</p>
+<p>As it is, we master both the <code>RecipeRepository</code> and <code>RecipeViewModel</code> classes, so it is very easy to manage the life cycle of these objects. This is much less obvious when using a class that does not belong to you.</p>
+<p>This notion of strong reference can be avoided / bypassed by the <code>weak</code> and <code>unowned</code> keywords that we will see in a next article!</p>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2>
+<p>As you can see, it is quite easy to add a simple <code>@escaping</code> without properly handling all the consequences of this addition.</p>
+<p>If possible, I advise you to use <code>async / await</code> to stay as up-to-date as possible. We will have the opportunity to see this in a future article.</p>
 
       </div>
     </section>
@@ -493,7 +628,7 @@
       
         <a
           class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
-          href="https://www.facebook.com/sharer/sharer.php?u=https://kelvas09.github.io/blog/posts/frame-versus-bounds/&amp;quote=Swift:%20bounds%20vs%20frame"
+          href="https://www.facebook.com/sharer/sharer.php?u=https://kelvas09.github.io/blog/posts/ios-escaping/&amp;quote=Swift:%20@escaping"
           title="Share on Facebook"
           aria-label="Share on Facebook"
           >
@@ -509,7 +644,7 @@
       
         <a
           class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
-          href="https://twitter.com/intent/tweet/?url=https://kelvas09.github.io/blog/posts/frame-versus-bounds/&amp;text=Swift:%20bounds%20vs%20frame"
+          href="https://twitter.com/intent/tweet/?url=https://kelvas09.github.io/blog/posts/ios-escaping/&amp;text=Swift:%20@escaping"
           title="Tweet on Twitter"
           aria-label="Tweet on Twitter"
           >
@@ -525,7 +660,7 @@
       
         <a
           class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
-          href="https://pinterest.com/pin/create/bookmarklet/?url=https://kelvas09.github.io/blog/posts/frame-versus-bounds/&amp;description=Swift:%20bounds%20vs%20frame"
+          href="https://pinterest.com/pin/create/bookmarklet/?url=https://kelvas09.github.io/blog/posts/ios-escaping/&amp;description=Swift:%20@escaping"
           title="Pin on Pinterest"
           aria-label="Pin on Pinterest"
           >
@@ -541,7 +676,7 @@
       
         <a
           class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
-          href="https://reddit.com/submit/?url=https://kelvas09.github.io/blog/posts/frame-versus-bounds/&amp;resubmit=true&amp;title=Swift:%20bounds%20vs%20frame"
+          href="https://reddit.com/submit/?url=https://kelvas09.github.io/blog/posts/ios-escaping/&amp;resubmit=true&amp;title=Swift:%20@escaping"
           title="Submit to Reddit"
           aria-label="Submit to Reddit"
           >
@@ -557,7 +692,7 @@
       
         <a
           class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
-          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://kelvas09.github.io/blog/posts/frame-versus-bounds/&amp;title=Swift:%20bounds%20vs%20frame"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://kelvas09.github.io/blog/posts/ios-escaping/&amp;title=Swift:%20@escaping"
           title="Share on LinkedIn"
           aria-label="Share on LinkedIn"
           >
@@ -573,7 +708,7 @@
       
         <a
           class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
-          href="mailto:?body=https://kelvas09.github.io/blog/posts/frame-versus-bounds/&amp;subject=Swift:%20bounds%20vs%20frame"
+          href="mailto:?body=https://kelvas09.github.io/blog/posts/ios-escaping/&amp;subject=Swift:%20@escaping"
           title="Send via email"
           aria-label="Send via email"
           >
@@ -599,7 +734,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group" href="/blog/posts/uitextfield-bug/">
+            <a class="flex group" href="/blog/posts/frame-versus-bounds/">
               <span
                 class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -611,11 +746,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >UITextField bug 😱</span
+                  >Swift: bounds vs frame</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2022-01-04 00:00:00 &#43;0000 UTC">4 January 2022</time>
+                    <time datetime="2022-02-27 00:00:00 &#43;0000 UTC">27 February 2022</time>
                   
                 </span>
               </span>
@@ -623,28 +758,6 @@
           
         </span>
         <span>
-          
-            <a class="flex text-right group" href="/blog/posts/ios-escaping/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Swift: @escaping</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2022-03-03 00:00:00 &#43;0000 UTC">3 March 2022</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
           
         </span>
       </div>
