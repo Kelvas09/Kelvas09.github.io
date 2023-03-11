@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://kelvas09.github.io/blog/sitemap.xml
